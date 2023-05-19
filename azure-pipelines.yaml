@@ -1,4 +1,7 @@
 ---
+pr:
+- master
+
 name: Daily monitoring for platform operations
 schedules:
   - cron: '0 8 * * Mon-Fri'
@@ -10,11 +13,12 @@ schedules:
 
 variables:
   isMaster: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
+  service_connection: dts-management-prod-intsvc
 
 jobs:
   - job: OrphanResourceCleanup
     # Only run on master branch
-    condition: eq(variables.isMaster, true)
+#     condition: eq(variables.isMaster, true)
     pool:
       name: 'hmcts-cftptl-agent-pool'
     steps:
