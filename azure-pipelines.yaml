@@ -15,7 +15,7 @@ variables:
 jobs:
   - job: OrphanResourceCleanup
     # Only run on master branch
-    condition: eq(variables.isMaster, true)
+#     condition: eq(variables.isMaster, true)
     pool:
       name: 'hmcts-cftptl-agent-pool'
     steps:
