@@ -22,14 +22,6 @@ jobs:
     pool:
       name: 'hmcts-cftptl-agent-pool'
     steps:
-      - task: Bash@3
-        displayName: 'Install resource-graph az extension'
-        inputs:
-          targetType: 'inline'
-          script: |
-            set -x
-            az config set extension.use_dynamic_install=yes_prompt
-            az extension add --name resource-graph
       - task: AzureKeyVault@1
         displayName: 'Get secrets from Keyvault'
         inputs:

@@ -8,7 +8,10 @@ SLACK_CHANNEL_NAME=$2
 send_slack_message () {
   curl -s -X POST --data-urlencode "payload={\"channel\": \"${SLACK_CHANNEL_NAME}\", \"username\": \"Plato\", \"text\": \"$1\", \"icon_emoji\": \":plato:\"}" $WEBHOOK_URL
 }
-
+# Install resource-graph
+echo "Installing resource-graph extension"
+az config set extension.use_dynamic_install=yes_prompt
+az extension add --name resource-graph
 
 resources_to_delete=()
 orphan_queries=(
