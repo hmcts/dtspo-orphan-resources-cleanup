@@ -1,7 +1,4 @@
 ---
-pr:
-- master
-
 name: Scheduled deletion of orphaned resources
 schedules:
   - cron: '0 8 * * Mon-Fri'
