@@ -2,7 +2,7 @@
 pr:
 - master
 
-name: Daily monitoring for platform operations
+name: Scheduled deletion of orphaned resources
 schedules:
   - cron: '0 8 * * Mon-Fri'
     displayName: Runs 9 AM Mon-Fri
@@ -36,9 +36,10 @@ jobs:
           azureSubscription:  "DTS-CFTPTL-INTSVC"
           keyVaultName:   "cftptl-intsvc"
           secretsFilter: 'orphaned-resources-slack-webhook'
-      - task: Bash@3
+      - task: AzureCLI@2
         displayName: 'Deleting orphaned resources in Azure'
         inputs:
-          targetType: filePath
-          filePath: scripts/orphan-cleanup.sh
+          scriptType: bash
+          scriptPath: scripts/orphan-cleanup.sh
+          azureSubscription: ${{ variables.service_connection }}
           arguments: $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
