@@ -1,4 +1,7 @@
 ---
+pr:
+- master
+
 name: Daily monitoring for platform operations
 schedules:
   - cron: '0 8 * * Mon-Fri'
