@@ -35,10 +35,14 @@ orphan_queries=(
     'resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
 )
 
+# Fetch subscriptions to run commands against
+subs=$(az account list | jq '.[].id' | tr -d '\n' | sed 's/""/ /g' | tr -d '"')
+echo $subs
+
 # Graph query to fetch orphaned Resource IDs 
 for query in "${orphan_queries[@]}"
 do
-  resources_to_delete+=$(az graph query -q "$query" | jq '.data[].id')
+  resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs | jq '.data[].id')
 done
 
 # Solves problem of some resource ID's not having space between them in jq output
@@ -46,7 +50,7 @@ resources_to_delete=$(sed 's/""/" "/g' <<< $resources_to_delete)
 
 # Convert into array to loop over resources and sequentially (to record failures) delete them
 resources_to_delete=($resources_to_delete)
-for resource in "${resources_to_delete[@]:0:1}"
+for resource in "${resources_to_delete[@]}"
 do
   # Trim " from resource, as az command also wraps with '
   resource=$(echo $resource | tr -d '"')
@@ -64,3 +68,5 @@ do
 #     fi
 #   fi
 done
+
+
