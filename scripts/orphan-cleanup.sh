@@ -46,7 +46,7 @@ resources_to_delete=$(sed 's/""/" "/g' <<< $resources_to_delete)
 
 # Convert into array to loop over resources and sequentially (to record failures) delete them
 resources_to_delete=($resources_to_delete)
-for resource in "${resources_to_delete[@]:0:1}"
+for resource in "${resources_to_delete[@]}"
 do
   # Trim " from resource, as az command also wraps with '
   resource=$(echo $resource | tr -d '"')
