@@ -10,7 +10,7 @@ schedules:
 
 variables:
   isMaster: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
-  service_connection: dts-management-prod-intsvc
+  service_connection: DCD-CFT-Sandbox
 
 jobs:
   - job: OrphanResourceCleanup
