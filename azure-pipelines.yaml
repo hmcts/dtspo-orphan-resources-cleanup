@@ -7,6 +7,14 @@ schedules:
       include:
         - master
     always: 'true'
+    
+resources:
+  repositories:
+  - repository: cnp-azuredevops-libraries
+    type: github
+    ref: refs/heads/master
+    name: hmcts/cnp-azuredevops-libraries
+    endpoint: 'hmcts'
 
 variables:
   isMaster: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
