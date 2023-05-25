@@ -61,7 +61,7 @@ do
   if [[ "$ignoreResource" =~ "true" ]] ; then
     echo "Skipping $resource as it is tagged."
   else
-    if [[ az resource delete --ids $resource ]]; then
+    if az resource delete --ids $resource ; then
       echo "Successfully deleted!"
     else
       send_slack_message "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n"
