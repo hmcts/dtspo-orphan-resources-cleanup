@@ -6,6 +6,7 @@ SLACK_CHANNEL_NAME=$2
 
 # Function to send slack message when a resource fails to delete
 function send_slack_message () {
+  echo "Deletion failed, to see why this occured please run: az resource delete --ids $resource --verbose"
   curl -s -X POST --data-urlencode "payload={\"channel\": \"${SLACK_CHANNEL_NAME}\", \"username\": \"Plato\", \"text\": \"$1\", \"icon_emoji\": \":plato:\"}" $WEBHOOK_URL
 }
 # Install resource-graph
@@ -50,7 +51,7 @@ resources_to_delete=$(sed 's/""/" "/g' <<< $resources_to_delete)
 
 # Convert into array to loop over resources and sequentially (to record failures) delete them
 resources_to_delete=($resources_to_delete)
-for resource in "${resources_to_delete[@]:0:2}"
+for resource in "${resources_to_delete[@]:0:1}"
 do
   # Trim " from resource, as az command also wraps with '
   resource=$(echo $resource | tr -d '"')
@@ -60,11 +61,10 @@ do
   if [[ "$ignoreResource" =~ "true" ]] ; then
     echo "Skipping $resource as it is tagged."
   else
-    if az resource delete --ids $resource ; then
+    if [[ az resource delete --ids $resource ]]; then
       echo "Successfully deleted!"
     else
       send_slack_message "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n"
-      echo "Deletion failed, to see why this occured please run: az resource delete --ids $resource --verbose"
     fi
   fi
 done
