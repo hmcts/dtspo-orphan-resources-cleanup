@@ -1,12 +1,12 @@
 ---
 name: Scheduled deletion of orphaned resources
-schedules:
-  - cron: '0 8 * * Mon-Fri'
-    displayName: Runs 9 AM Mon-Fri
-    branches:
-      include:
-        - master
-    always: 'true'
+# schedules:
+#   - cron: '0 8 * * Mon-Fri'
+#     displayName: Runs 9 AM Mon-Fri
+#     branches:
+#       include:
+#         - master
+#     always: 'true'
 
 variables:
   isMaster: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
