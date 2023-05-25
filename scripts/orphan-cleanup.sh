@@ -5,7 +5,7 @@ SLACK_CHANNEL_NAME=$2
 
 
 # Function to send slack message when a resource fails to delete
-send_slack_message () {
+function send_slack_message () {
   curl -s -X POST --data-urlencode "payload={\"channel\": \"${SLACK_CHANNEL_NAME}\", \"username\": \"Plato\", \"text\": \"$1\", \"icon_emoji\": \":plato:\"}" $WEBHOOK_URL
 }
 # Install resource-graph
@@ -37,7 +37,7 @@ orphan_queries=(
 
 # Fetch subscriptions to run commands against
 subs=$(az account list | jq '.[].id' | tr -d '\n' | sed 's/""/ /g' | tr -d '"')
-echo $subs
+echo "Subscriptions to run against: $subs"
 
 # Graph query to fetch orphaned Resource IDs 
 for query in "${orphan_queries[@]}"
