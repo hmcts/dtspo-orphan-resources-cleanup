@@ -2,13 +2,31 @@
 # available at https://portal.azure.com/#@HMCTS.NET/resource/subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/platopsmonitor_test/providers/microsoft.insights/workbooks/03553b7d-6be1-459a-b747-7c69e21f5cb3/workbook
 WEBHOOK_URL=$1
 SLACK_CHANNEL_NAME=$2
+RUN_OPTION=""
 
+while getopts ":m:" opt; do
+  case $opt in
+    m)
+      echo "-m (mode) option was triggered with parameter: $OPTARG" >&2
+      RUN_OPTION=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
 
 # Function to send slack message when a resource fails to delete
 function send_slack_message () {
   echo "Deletion failed, to see why this occured please run: az resource delete --ids $resource --verbose"
   curl -s -X POST --data-urlencode "payload={\"channel\": \"${SLACK_CHANNEL_NAME}\", \"username\": \"Plato\", \"text\": \"$1\", \"icon_emoji\": \":plato:\"}" $WEBHOOK_URL
 }
+
 # Install resource-graph
 echo "Installing resource-graph extension"
 az config set extension.use_dynamic_install=yes_prompt
@@ -55,16 +73,20 @@ for resource in "${resources_to_delete[@]:0:1}"
 do
   # Trim " from resource, as az command also wraps with '
   resource=$(echo $resource | tr -d '"')
-  echo "Attemping delete of: $resource\n"
-  # Check if resource should be ignored by this automation, based on tag ignoredByOrphanCleanup: true
-  ignoreResource=$(az resource show --ids $resource | jq '.tags.ignoredByOrphanCleanup')
-  if [[ "$ignoreResource" =~ "true" ]] ; then
-    echo "Skipping $resource as it is tagged."
+  if [[ "$RUN_OPTION" =~ "dry-run" ]] ; then
+    echo "Dry-Run delete of: $resource\n"
   else
-    if az resource delete --ids $resource ; then
-      echo "Successfully deleted!"
+    echo "Attemping delete of: $resource\n"
+    # Check if resource should be ignored by this automation, based on tag ignoredByOrphanCleanup: true
+    ignoreResource=$(az resource show --ids $resource | jq '.tags.ignoredByOrphanCleanup')
+    if [[ "$ignoreResource" =~ "true" ]] ; then
+      echo "Skipping $resource as it is tagged."
     else
-      send_slack_message "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n"
+      if az resource delete --ids $resource ; then
+        echo "Successfully deleted!"
+      else
+        send_slack_message "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n"
+      fi
     fi
   fi
 done
