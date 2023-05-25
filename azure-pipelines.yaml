@@ -32,7 +32,7 @@ jobs:
           scriptType: bash
           scriptPath: scripts/orphan-cleanup.sh
           azureSubscription: ${{ variables.service_connection }}
-          arguments: '-m dry-run' $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+          arguments: "-m dry-run" $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
       - task: AzureCLI@2
         displayName: 'Deleting orphaned resources in Azure'
         condition: eq(variables.isMaster, true)
