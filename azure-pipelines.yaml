@@ -9,7 +9,7 @@ schedules:
     always: 'true'
 trigger: none
 
-# Option to run in dry-run mode (only applicable to master branch)
+# Option to run in dry-run mode (only applicable to master branch) as no conditionals in parameters
 parameters:
 - name: dryRunEnabled
   displayName: 'Enable Dry-Run Mode'
@@ -46,6 +46,7 @@ jobs:
               else
                 './scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
               fi
+          # Always run in dry-run mode if not master branch
           ${{ elseif eq(variables.isMaster, false) }}:
             inlineScript: './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
           ${{ else }}:
