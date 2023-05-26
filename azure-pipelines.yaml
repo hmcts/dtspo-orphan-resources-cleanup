@@ -9,13 +9,12 @@ schedules:
     always: 'true'
 trigger: none
 
-# Option to run in dry-run mode for master pipeline
+# Option to run in dry-run mode (only applicable to master branch)
 parameters:
 - name: dryRunEnabled
   displayName: 'Enable Dry-Run Mode'
   type: boolean
   default: false
-  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
 
 variables:
   isMaster: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
