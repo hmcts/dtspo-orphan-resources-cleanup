@@ -29,6 +29,6 @@ jobs:
         displayName: 'Deleting orphaned resources in Azure'
         inputs:
           scriptType: bash
-          scriptPath: scripts/orphan-cleanup.sh
           azureSubscription: ${{ variables.service_connection }}
-          arguments: $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+          scriptLocation: 'inlineScript'
+          inlineScript: './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
