@@ -31,7 +31,7 @@ jobs:
           scriptType: bash
           azureSubscription: ${{ variables.service_connection }}
           scriptLocation: 'inlineScript'
-          ${{ if eq(variables.isMaster, false) }}:
-            inlineScript: './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
-          ${{ else }}:
+          ${{ if eq(variables.isMaster, true) }}:
             inlineScript: './scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
+          ${{ elseif eq(variables.isMaster, false) }}:
+            inlineScript: './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
