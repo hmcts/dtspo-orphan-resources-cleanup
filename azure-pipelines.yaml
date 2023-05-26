@@ -31,4 +31,4 @@ jobs:
           scriptType: bash
           scriptPath: scripts/orphan-cleanup.sh
           azureSubscription: ${{ variables.service_connection }}
-          arguments: "-m dry-run" $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+          arguments: $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
