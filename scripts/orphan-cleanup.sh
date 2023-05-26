@@ -4,6 +4,7 @@ WEBHOOK_URL=$1
 SLACK_CHANNEL_NAME=$2
 RUN_OPTION=""
 
+# Mode option to run in dry run (default for pr build, give -m dry-run locally
 while getopts ":m:" opt; do
   case $opt in
     m)

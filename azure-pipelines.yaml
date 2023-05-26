@@ -14,8 +14,6 @@ variables:
 
 jobs:
   - job: OrphanResourceCleanup
-    # Only run on master branch
-#     condition: eq(variables.isMaster, true)
     pool:
       name: 'hmcts-cftptl-agent-pool'
     steps:
@@ -26,9 +24,19 @@ jobs:
           keyVaultName:   "cftptl-intsvc"
           secretsFilter: 'orphaned-resources-slack-webhook'
       - task: AzureCLI@2
+        # Run dry run if not master branch
+        condition: eq(variables.isMaster, false)
         displayName: 'Deleting orphaned resources in Azure'
         inputs:
           scriptType: bash
           azureSubscription: ${{ variables.service_connection }}
           scriptLocation: 'inlineScript'
           inlineScript: './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
+      - task: AzureCLI@2
+        condition: eq(variables.isMaster, true)
+        displayName: 'Deleting orphaned resources in Azure'
+        inputs:
+          scriptType: bash
+          azureSubscription: ${{ variables.service_connection }}
+          scriptLocation: 'inlineScript'
+          inlineScript: './scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
