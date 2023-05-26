@@ -35,3 +35,4 @@ jobs:
             inlineScript: './scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
           ${{ elseif eq(variables.isMaster, false) }}:
             inlineScript: './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
+          ${{ else }}:
