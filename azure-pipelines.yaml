@@ -41,6 +41,7 @@ jobs:
           ${{ if eq(variables.isMaster, true) }}:
             inlineScript: |
               set -x
+              echo "Running on master branch with dry-run as ${{ parameters.dryRunEnabled }}"
               if ${{ parameters.dryRunEnabled }} == true
               then
                 './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
