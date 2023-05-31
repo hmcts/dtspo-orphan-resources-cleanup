@@ -38,10 +38,11 @@ jobs:
           scriptType: bash
           azureSubscription: ${{ variables.service_connection }}
           scriptLocation: 'inlineScript'
+          arguments: '${{ variables.isMaster }} ${{ parameters.dryRunEnabled }}'
           inlineScript: |
             set -x
-            if [[ ${{ variables.isMaster }} ]]; then
-              if [[ ${{ parameters.dryRunEnabled }} == true ]]; then
+            if [[ $1 == 'True' ]]; then
+              if [[ $2 == true ]]; then
                 echo "Running in dry-run mode"
                 ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
               else
