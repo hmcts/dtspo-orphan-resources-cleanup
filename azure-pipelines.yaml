@@ -41,6 +41,7 @@ jobs:
           arguments: '${{ variables.isMaster }} ${{ parameters.dryRunEnabled }}'
           inlineScript: |
             set -x
+            echo $1
             if [[ $1 == 'True' ]]; then
               echo "Running on master branch"
               if [[ $2 == true ]]; then
