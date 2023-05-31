@@ -41,8 +41,7 @@ jobs:
           inlineScript: |
             set -x
             if [[ ${{ variables.isMaster }} ]]; then
-                if ${{ parameters.dryRunEnabled }} == true
-              then
+              if [[ ${{ parameters.dryRunEnabled }} == true ]]; then
               else
                 ./scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
               fi
