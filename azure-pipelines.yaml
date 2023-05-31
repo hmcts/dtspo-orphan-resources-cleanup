@@ -50,7 +50,7 @@ jobs:
       - task: AzureCLI@2
         # Run dry run if not master branch
         condition: eq(variables.isMaster, false)
-        displayName: 'Deleting orphaned resources in Azure'
+        displayName: 'Dry-Run delete orphaned resources in Azure'
         inputs:
           scriptType: bash
           azureSubscription: ${{ variables.service_connection }}
