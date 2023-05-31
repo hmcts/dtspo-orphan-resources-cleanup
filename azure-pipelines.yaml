@@ -56,4 +56,4 @@ jobs:
           azureSubscription: ${{ variables.service_connection }}
           scriptLocation: 'inlineScript'
           inlineScript: |
-            ./scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+            ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
