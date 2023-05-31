@@ -34,22 +34,26 @@ jobs:
       - task: AzureCLI@2
         # Run dry run if not master branch
         displayName: 'Deleting orphaned resources in Azure'
+        condition: eq(variables.isMaster, true)
         inputs:
           scriptType: bash
           azureSubscription: ${{ variables.service_connection }}
           scriptLocation: 'inlineScript'
-          arguments: '${{ variables.isMaster }} ${{ parameters.dryRunEnabled }}'
           inlineScript: |
             set -x
-            if [[ $1 == 'True' ]]; then
-              echo "Running on master branch"
-              if [[ $2 == true ]]; then
-                echo "Running in dry-run mode"
-                ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
-              else
-                ./scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
-              fi
+            if [[ ${{ parameters.dryRunEnabled }} == true ]]; then
+              echo "Running in dry-run mode"
+              ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
             else
-                echo "Running on PR branch"
-                ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+              ./scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
             fi
+      - task: AzureCLI@2
+        # Run dry run if not master branch
+        condition: eq(variables.isMaster, false)
+        displayName: 'Dry-Run delete orphaned resources in Azure'
+        inputs:
+          scriptType: bash
+          azureSubscription: ${{ variables.service_connection }}
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
