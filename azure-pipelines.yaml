@@ -41,7 +41,7 @@ jobs:
           scriptLocation: 'inlineScript'
           inlineScript: |
             set -x
-            if [[ ${{ parameters.dryRunEnabled }} == true ]]; then
+            if [[ ${{ parameters.dryRunEnabled }} == True ]]; then
               echo "Running in dry-run mode"
               ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
             else
