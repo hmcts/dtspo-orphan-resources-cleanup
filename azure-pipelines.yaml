@@ -38,18 +38,18 @@ jobs:
           scriptType: bash
           azureSubscription: ${{ variables.service_connection }}
           scriptLocation: 'inlineScript'
-          ${{ if eq(variables.isMaster, true) }}:
-            inlineScript: |
-              set -x
-              echo "Running on master branch with dry-run as ${{ parameters.dryRunEnabled }}"
-              if ${{ parameters.dryRunEnabled }} == true
-              then
-                './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
+          arguments: '${{ variables.isMaster }} ${{ parameters.dryRunEnabled }}'
+          inlineScript: |
+            set -x
+            if [[ $1 == 'True' ]]; then
+              echo "Running on master branch"
+              if [[ $2 == true ]]; then
+                echo "Running in dry-run mode"
+                ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
               else
-                './scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
+                ./scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
               fi
-          # Always run in dry-run mode if not master branch
-          ${{ elseif eq(variables.isMaster, false) }}:
-            inlineScript: './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
-          ${{ else }}:
-            inlineScript: './scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup'
+            else
+                echo "Running on PR branch"
+                ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+            fi
