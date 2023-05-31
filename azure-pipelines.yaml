@@ -42,6 +42,7 @@ jobs:
           inlineScript: |
             set -x
             if [[ $1 == 'True' ]]; then
+              echo "Running on master branch"
               if [[ $2 == true ]]; then
                 echo "Running in dry-run mode"
                 ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
@@ -49,5 +50,6 @@ jobs:
                 ./scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
               fi
             else
+                echo "Running on PR branch"
                 ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
             fi
