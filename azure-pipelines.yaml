@@ -42,6 +42,8 @@ jobs:
             set -x
             if [[ ${{ variables.isMaster }} ]]; then
               if [[ ${{ parameters.dryRunEnabled }} == true ]]; then
+                echo "Running in dry-run mode"
+                ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
               else
                 ./scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
               fi
