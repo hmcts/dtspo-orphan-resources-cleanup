@@ -45,7 +45,7 @@ jobs:
               echo "Running in dry-run mode"
               ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
             else
-              ./scripts/orphan-cleanup.sh $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+              ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
             fi
       - task: AzureCLI@2
         # Run dry run if not master branch
