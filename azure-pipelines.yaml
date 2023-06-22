@@ -1,12 +1,12 @@
 ---
 name: Scheduled deletion of orphaned resources
-schedules:
-  - cron: '0 8 * * Mon-Fri'
-    displayName: Runs 9 AM Mon-Fri
-    branches:
-      include:
-        - master
-    always: 'true'
+# schedules:
+#   - cron: '0 8 * * Mon-Fri'
+#     displayName: Runs 9 AM Mon-Fri
+#     branches:
+#       include:
+#         - master
+#     always: 'true'
 trigger: none
 
 # Option to run in dry-run mode (only applicable to master branch) as no conditionals in parameters
