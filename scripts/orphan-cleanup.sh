@@ -36,7 +36,7 @@ az extension add --name resource-graph
 resources_to_delete=()
 orphan_queries=(
     # Resource Groups
-    'ResourceContainers | where type == "microsoft.resources/subscriptions/resourcegroups" | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | join kind=leftouter (Resources | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | summarize count() by rgAndSub) on rgAndSub | where isnull(count_) | extend Details = pack_all() | project subscriptionId, Resource=id, count_, location, tags ,Details'
+    'ResourceContainers | where type == "microsoft.resources/subscriptions/resourcegroups" | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | join kind=leftouter (Resources | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | summarize count() by rgAndSub) on rgAndSub | where isnull(count_) | extend Details = pack_all() | project subscriptionId, Resource=id, count_, location, tags , Details'
 )
 
 # Fetch subscriptions to run commands against
@@ -46,34 +46,5 @@ echo "Subscriptions to run against: $subs"
 # Graph query to fetch orphaned Resource IDs 
 for query in "${orphan_queries[@]}"
 do
-  resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs | jq '.data[].id')
-done
-
-# Solves problem of some resource ID's not having space between them in jq output
-resources_to_delete=$(sed 's/""/" "/g' <<< $resources_to_delete)
-
-# Convert into array to loop over resources and sequentially (to record failures) delete them
-resources_to_delete=($resources_to_delete)
-for resource in "${resources_to_delete[@]}"
-do
-  # Trim " from resource, as az command also wraps with '
-  resource=$(echo $resource | tr -d '"')
-  if [[ "$RUN_OPTION" =~ "dry-run" ]] ; then
-    echo "Dry-Run delete of: $resource\n"
-  else
-    echo "Attemping delete of: $resource\n"
-    # Check if resource should be ignored by this automation, based on tag ignoredByOrphanCleanup: true
-    ignoreResource=$(az resource show --ids $resource | jq '.tags.ignoredByOrphanCleanup')
-    if [[ "$ignoreResource" =~ "true" ]] ; then
-      echo "Skipping $resource as it is tagged."
-    else
-      if az resource delete --ids $resource ; then
-        echo "Successfully deleted!"
-      else
-        send_slack_message "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n"
-      fi
-    fi
-  fi
-  echo ""
-  echo $resources_to_delete
+  az graph query -q "$query" --subscriptions $subs
 done
