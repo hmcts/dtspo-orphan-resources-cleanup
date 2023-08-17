@@ -15,7 +15,7 @@ jobs:
   dry-run:
     runs-on: ubuntu-latest
     permissions:
-      id-token: read
+      id-token: write
     if: ${{ inputs.dryRunEnabled = true }}
     steps:
       - name: Checkout
