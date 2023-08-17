@@ -25,6 +25,7 @@ jobs:
         with:
           client-id: a1f7ea99-63f1-4b56-8813-a4b0ab781cf2 # DTSPO Orphaned Resource Cleanup
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
+          allow-no-subscriptions: true
       - name: Get slack webhook secret
         id: slack-webhook
         run: |
@@ -51,6 +52,7 @@ jobs:
         with:
           client-id: a1f7ea99-63f1-4b56-8813-a4b0ab781cf2 # DTSPO Orphaned Resource Cleanup
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
+          allow-no-subscriptions: true
       - name: Get slack webhook secret
         id: slack-webhook
         run: |
