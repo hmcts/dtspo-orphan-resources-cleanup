@@ -40,7 +40,7 @@ orphan_queries=(
 )
 
 # Fetch subscriptions to run commands against
-subs=$(az account list | jq '.[].id' | tr -d '\n' | sed 's/""/ /g' | tr -d '"')
+subs=$(0978315c-75fe-4ada-9d11-1eb5e0e0b214)
 echo "Subscriptions to run against: $subs"
 
 # Graph query to fetch orphaned Resource IDs 
