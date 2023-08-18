@@ -40,7 +40,7 @@ orphan_queries=(
 )
 
 # Fetch subscriptions to run commands against
-subs=$(b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb)
+subs=$('b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb')
 echo "Subscriptions to run against: $subs"
 
 # Graph query to fetch orphaned Resource IDs 
