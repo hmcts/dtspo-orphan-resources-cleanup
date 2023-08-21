@@ -36,6 +36,12 @@ parameters:
       service_connection: 'GA-Prod-Tenant'
       dependsOn: 'Precheck'
 
+    - deployment: 'prod'
+      environment: 'prod'
+      component: 'custom_roles'
+      service_connection: 'GA-Prod-Tenant'
+      dependsOn: 'Precheck'
+
 variables:
   - name: timeoutInMinutes
     value: "60"
