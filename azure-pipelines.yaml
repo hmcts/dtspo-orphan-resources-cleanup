@@ -1,59 +1,82 @@
----
-name: Scheduled deletion of orphaned resources
-# schedules:
-#   - cron: '0 8 * * Mon-Fri'
-#     displayName: Runs 9 AM Mon-Fri
-#     branches:
-#       include:
-#         - master
-#     always: 'true'
-trigger: none
+trigger:
+  batch: "true"
+  branches:
+    include:
+    - master
 
-# Option to run in dry-run mode (only applicable to master branch) as no conditionals in parameters
+resources:
+  repositories:
+  - repository: cnp-azuredevops-libraries
+    type: github
+    ref: refs/heads/master
+    name: hmcts/cnp-azuredevops-libraries
+    endpoint: 'hmcts'
+
 parameters:
-- name: dryRunEnabled
-  displayName: 'Enable Dry-Run Mode'
-  type: boolean
-  default: false
+  - name: overrideAction
+    type: string
+    default: plan
+    values:
+    - plan
+    - apply
+    - destroy
+
+  - name: environment_components
+    type: object
+    default:
+    - deployment: 'Sandbox'
+      environment: 'sandbox'
+      component: 'CNP'
+      service_connection: 'GA-Prod-Tenant'
+      dependsOn: 'Precheck'
+
+    - deployment: 'non-prod'
+      environment: 'non-prod'
+      component: 'CNP'
+      service_connection: 'GA-Prod-Tenant'
+      dependsOn: 'Precheck'
 
 variables:
-  isMaster: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
-  service_connection: DCD-CFT-Sandbox
+  - name: timeoutInMinutes
+    value: "60"
+  - name: agentPool
+    value: ubuntu-latest
+  - name: build
+    value: $(Build.BuildNumber)
+  - name: product
+    value: cft-platform
+  - name: terraformInitSubscription
+    value: 04d27a32-7a07-48b3-95b8-3c8691e1a263
+  - template: vars/input-variables.yaml@cnp-azuredevops-libraries
 
-jobs:
-  - job: OrphanResourceCleanup
-    pool:
-      name: 'hmcts-cftptl-agent-pool'
-    steps:
-      - task: AzureKeyVault@1
-        displayName: 'Get secrets from Keyvault'
-        inputs:
-          azureSubscription:  "DTS-CFTPTL-INTSVC"
-          keyVaultName:   "cftptl-intsvc"
-          secretsFilter: 'orphaned-resources-slack-webhook'
-      - task: AzureCLI@2
-        # Run dry run if not master branch
-        displayName: 'Deleting orphaned resources in Azure'
-        condition: eq(variables.isMaster, true)
-        inputs:
-          scriptType: bash
-          azureSubscription: ${{ variables.service_connection }}
-          scriptLocation: 'inlineScript'
-          inlineScript: |
-            set -x
-            if [[ ${{ parameters.dryRunEnabled }} == True ]]; then
-              echo "Running in dry-run mode"
-              ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
-            else
-              ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
-            fi
-      - task: AzureCLI@2
-        # Run dry run if not master branch
-        condition: eq(variables.isMaster, false)
-        displayName: 'Dry-Run delete orphaned resources in Azure'
-        inputs:
-          scriptType: bash
-          azureSubscription: ${{ variables.service_connection }}
-          scriptLocation: 'inlineScript'
-          inlineScript: |
-            ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+stages:
+  - stage: Precheck
+    jobs:
+      - job: Precheck
+        pool:
+          vmImage: ${{ variables.agentPool }}
+        timeoutInMinutes: ${{ variables.timeoutInMinutes }}
+        steps:
+          - template: steps/terraform-precheck.yaml@cnp-azuredevops-libraries
+            parameters:
+              keyvaultName: 'infra-vault-nonprod'
+              keyvaultSecret: 'azure-devops-sp-token'
+              serviceConnection: 'DCD-CFT-Sandbox'
+              overrideAction: ${{ parameters.overrideAction }}
+
+  - stage: ${{ deployment.deployment }}
+    dependsOn: ${{ deployment.dependsOn }}
+    jobs:
+      - job: TerraformPlanApply
+        pool:
+          vmImage: ${{ variables.agentPool }}
+        timeoutInMinutes: ${{ variables.timeoutInMinutes }}
+        steps:
+        - template: steps/terraform.yaml@cnp-azuredevops-libraries
+          parameters:
+            overrideAction: ${{ parameters.overrideAction }}
+            environment: ${{ deployment.environment }}
+            component: ${{ deployment.component }}
+            serviceConnection: ${{ deployment.service_connection }}
+            terraformInitSubscription: ${{ variables.terraformInitSubscription }}
+            product: ${{ variables.product }}

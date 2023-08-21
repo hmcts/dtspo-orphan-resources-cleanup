@@ -1,0 +1,59 @@
+---
+name: Scheduled deletion of orphaned resources
+# schedules:
+#   - cron: '0 8 * * Mon-Fri'
+#     displayName: Runs 9 AM Mon-Fri
+#     branches:
+#       include:
+#         - master
+#     always: 'true'
+trigger: none
+
+# Option to run in dry-run mode (only applicable to master branch) as no conditionals in parameters
+parameters:
+- name: dryRunEnabled
+  displayName: 'Enable Dry-Run Mode'
+  type: boolean
+  default: false
+
+variables:
+  isMaster: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
+  service_connection: DCD-CFT-Sandbox
+
+jobs:
+  - job: OrphanResourceCleanup
+    pool:
+      name: 'hmcts-cftptl-agent-pool'
+    steps:
+      - task: AzureKeyVault@1
+        displayName: 'Get secrets from Keyvault'
+        inputs:
+          azureSubscription:  "DTS-CFTPTL-INTSVC"
+          keyVaultName:   "cftptl-intsvc"
+          secretsFilter: 'orphaned-resources-slack-webhook'
+      - task: AzureCLI@2
+        # Run dry run if not master branch
+        displayName: 'Deleting orphaned resources in Azure'
+        condition: eq(variables.isMaster, true)
+        inputs:
+          scriptType: bash
+          azureSubscription: ${{ variables.service_connection }}
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            set -x
+            if [[ ${{ parameters.dryRunEnabled }} == True ]]; then
+              echo "Running in dry-run mode"
+              ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+            else
+              ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
+            fi
+      - task: AzureCLI@2
+        # Run dry run if not master branch
+        condition: eq(variables.isMaster, false)
+        displayName: 'Dry-Run delete orphaned resources in Azure'
+        inputs:
+          scriptType: bash
+          azureSubscription: ${{ variables.service_connection }}
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            ./scripts/orphan-cleanup.sh -m dry-run $(orphaned-resources-slack-webhook) dtspo-orphaned-resource-cleanup
