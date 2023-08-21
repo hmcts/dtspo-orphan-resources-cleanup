@@ -1,4 +1,1 @@
-variable "management_groups" {
-  type    = list(string)
-  default = ["CFT-Sandbox"]
-}
+management_groups = ["CFT-Sandbox"]
