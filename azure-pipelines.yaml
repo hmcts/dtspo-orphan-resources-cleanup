@@ -81,9 +81,9 @@ stages:
               serviceConnection: ${{ deployment.service_connection }}
               terraformInitSubscription: ${{ variables.terraformInitSubscription }}
               product: ${{ variables.product }}
-              ${{ if eq(parameter.environment, 'sbox') }}:
+              ${{ if eq(deployment.environment, 'sbox') }}:
                   initCommandOptions: -backend-config=resource_group_name=azure-control-prod-rg
                   destroyCommandOptions: ${{ variables.globalTfCommandOptions }} -backend-config resource_group_name=azure-control-prod-rg
-              ${{ if eq(parameter.environment, 'stg') }}:
+              ${{ if eq(deployment.environment, 'stg') }}:
                   initCommandOptions: -backend-config=resource_group_name=azure-control-prod-rg
                   destroyCommandOptions: ${{ variables.globalTfCommandOptions }} -backend-config resource_group_name=azure-control-prod-rg
