@@ -21,7 +21,7 @@ parameters:
     - apply
     - destroy
 
-  - name: environment_components
+  - name: deployment
     type: object
     default:
     - deployment: 'Sandbox'
