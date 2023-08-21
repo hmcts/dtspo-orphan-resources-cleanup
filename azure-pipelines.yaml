@@ -30,8 +30,8 @@ parameters:
       service_connection: 'GA-Prod-Tenant'
       dependsOn: 'Precheck'
 
-    - deployment: 'non-prod'
-      environment: 'non-prod'
+    - deployment: 'non_prod'
+      environment: 'non_prod'
       component: 'CNP'
       service_connection: 'GA-Prod-Tenant'
       dependsOn: 'Precheck'
