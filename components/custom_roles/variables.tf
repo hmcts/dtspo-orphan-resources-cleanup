@@ -26,6 +26,6 @@ variable "expiresAfter" {
 }
 
 variable "management_groups" {
-  type = list(string)
+  type    = list(string)
   default = []
 }
