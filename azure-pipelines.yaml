@@ -21,7 +21,7 @@ parameters:
     - apply
     - destroy
 
-  - name: deployment
+  - name: environment_components
     type: object
     default:
     - deployment: 'Sandbox'
@@ -63,20 +63,20 @@ stages:
               keyvaultSecret: 'azure-devops-sp-token'
               serviceConnection: 'DCD-CFT-Sandbox'
               overrideAction: ${{ parameters.overrideAction }}
-
-  - stage: ${{ deployment.deployment }}
-    dependsOn: ${{ deployment.dependsOn }}
-    jobs:
-      - job: TerraformPlanApply
-        pool:
-          vmImage: ${{ variables.agentPool }}
-        timeoutInMinutes: ${{ variables.timeoutInMinutes }}
-        steps:
-        - template: steps/terraform.yaml@cnp-azuredevops-libraries
-          parameters:
-            overrideAction: ${{ parameters.overrideAction }}
-            environment: ${{ deployment.environment }}
-            component: ${{ deployment.component }}
-            serviceConnection: ${{ deployment.service_connection }}
-            terraformInitSubscription: ${{ variables.terraformInitSubscription }}
-            product: ${{ variables.product }}
+  - ${{ each deployment in parameters.environment_components }}:
+      stage: ${{ deployment.deployment }}
+      dependsOn: ${{ deployment.dependsOn }}
+      jobs:
+        - job: TerraformPlanApply
+          pool:
+            vmImage: ${{ variables.agentPool }}
+          timeoutInMinutes: ${{ variables.timeoutInMinutes }}
+          steps:
+          - template: steps/terraform.yaml@cnp-azuredevops-libraries
+            parameters:
+              overrideAction: ${{ parameters.overrideAction }}
+              environment: ${{ deployment.environment }}
+              component: ${{ deployment.component }}
+              serviceConnection: ${{ deployment.service_connection }}
+              terraformInitSubscription: ${{ variables.terraformInitSubscription }}
+              product: ${{ variables.product }}
