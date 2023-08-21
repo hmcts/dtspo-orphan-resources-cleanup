@@ -26,13 +26,13 @@ parameters:
     default:
     - deployment: 'sandbox'
       environment: 'sandbox'
-      component: 'CNP'
+      component: 'custom_roles'
       service_connection: 'GA-Prod-Tenant'
       dependsOn: 'Precheck'
 
     - deployment: 'non_prod'
-      environment: 'non_prod'
-      component: 'CNP'
+      environment: 'non-prod'
+      component: 'custom_roles'
       service_connection: 'GA-Prod-Tenant'
       dependsOn: 'Precheck'
 
