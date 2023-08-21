@@ -25,13 +25,13 @@ parameters:
     type: object
     default:
     - deployment: 'sandbox'
-      environment: 'sandbox'
+      environment: 'sbox'
       component: 'custom_roles'
       service_connection: 'GA-Prod-Tenant'
       dependsOn: 'Precheck'
 
     - deployment: 'non_prod'
-      environment: 'non-prod'
+      environment: 'stg'
       component: 'custom_roles'
       service_connection: 'GA-Prod-Tenant'
       dependsOn: 'Precheck'
