@@ -1,21 +1,3 @@
-variable "role_definitions" {
-  description = "Settings required to create Custom Role Defintions described in README.md"
-  type = list(object({
-    // name of the custom Role
-    name = string
-    // description of the custom Role
-    description = string
-    // list of azure builtin role definitions to be assigned to each of defined scopes.
-    permissions = list(object({
-      scopes           = list(string)
-      actions          = list(string)
-      not_actions      = list(string)
-      data_actions     = list(string)
-      not_data_actions = list(string)
-    }))
-  }))
-}
-
 variable "subscription_id" {
   description = "Subscription to run against"
   type        = string
