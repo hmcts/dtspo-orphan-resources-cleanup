@@ -2,6 +2,11 @@ variable "env" {
   default = []
 }
 
+variable "subscription_id" {
+  description = "Subscription to run against"
+  type        = string
+}
+
 variable "project" {
   default = "hmcts"
 }
