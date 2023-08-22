@@ -1,3 +1,5 @@
+data "azurerm_client_config" "current" {}
+
 resource "azurerm_role_definition" "orphan_cleanup" {
   for_each = toset(var.management_groups)
 
