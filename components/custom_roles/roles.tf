@@ -1,4 +1,10 @@
-data "azurerm_client_config" "current" {}
+data "azurerm_management_group" "management_group_id" {
+  name = "CFT - Sandbox"
+}
+
+output "management_group_id_output" {
+  value = data.azurerm_management_group.management_group_id.id
+}
 
 resource "azurerm_role_definition" "orphan_cleanup" {
   for_each = toset(var.management_groups)
