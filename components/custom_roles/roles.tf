@@ -1,22 +1,21 @@
-# data "azurerm_management_group" "management_group_id" {
-#   name = "CFT-Sandbox"
-# }
+locals {
+  role_definitions_yaml = file("${path.cwd}/role_definitions.yaml")
+  role_definitions      = yamldecode(local.role_definitions_yaml)
+}
 
-# output "management_group_id_output" {
-#   value = data.azurerm_management_group.management_group_id.id
-# }
+resource "azurerm_role_definition" "custom_roles" {
+  for_each = { for role in local.role_definitions : role.name => role }
 
-resource "azurerm_role_definition" "orphan_cleanup" {
-  for_each = toset(var.management_groups)
-
-  name        = "Orphan Resource Cleanup Read/Delete"                          # this should be assignable
-  description = "Read and Resource Delete Access to applicably assigned scope" # this should be assignable
-  scope       = each.key
+  name        = each.value.name
+  description = each.value.description
 
   permissions {
-    actions     = ["*/read", "Microsoft.Resources/*/delete"]
-    not_actions = []
+    actions          = each.value.permissions.actions
+    not_actions      = each.value.permissions.not_actions
+    data_actions     = each.value.permissions.data_actions
+    not_data_actions = each.value.permissions.not_data_actions
   }
 
-  assignable_scopes = [each.key]
+  assignable_scopes = each.value.permissionsscopes
+
 }

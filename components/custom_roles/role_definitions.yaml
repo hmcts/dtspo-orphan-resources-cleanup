@@ -1,0 +1,12 @@
+---
+- name: Orphan Resource Cleanup Read/Delete
+  description: Read and Resource Delete Access to applicably assigned scope
+  permissions:
+    scopes:
+      - /providers/Microsoft.Management/managementGroups/CFT-Sandbox
+    actions:
+      - "*/read"
+      - "Microsoft.Resources/*/delete"
+    not_actions:
+    data_actions:
+    not_data_actions:
