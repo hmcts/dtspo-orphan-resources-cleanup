@@ -8,6 +8,7 @@ resource "azurerm_role_definition" "custom_roles" {
 
   name        = each.value.name
   description = each.value.description
+  scope       = each.value.permissions.scopes[0]
 
   permissions {
     actions          = each.value.permissions.actions
