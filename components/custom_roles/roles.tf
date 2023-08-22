@@ -11,7 +11,7 @@ resource "azurerm_role_definition" "orphan_cleanup" {
 
   name        = "Orphan Resource Cleanup Read/Delete"
   description = "Read and Resource Delete Access to applicably assigned scope"
-  scope       = join("/providers/Microsoft.Management/managementGroups/", [each.key])
+  scope       = data.azurerm_management_group.management_group_id.id
 
   permissions {
     actions     = ["*/read", "Microsoft.Resources/*/delete"]
