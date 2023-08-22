@@ -1,0 +1,11 @@
+definitions:
+  - name: Orphan Resource Cleanup Read/Delete
+    description: Read and Resource Delete Access to applicably assigned scope
+    scopes:
+      management_groups:
+        - scope1
+        - scope2
+      subscriptions:
+        - scope1
+        - scope2
+        - scope3
