@@ -1,5 +1,5 @@
 data "azurerm_management_group" "management_group_id" {
-  name = "CFT - Sandbox"
+  name = "CFT-Sandbox"
 }
 
 output "management_group_id_output" {
