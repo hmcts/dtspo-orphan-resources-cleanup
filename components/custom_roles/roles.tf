@@ -5,16 +5,16 @@ locals {
   role_scope_map = merge(flatten([
     for role in local.role_definitions : [{
       for scope in role.permissions.scopes :
-        "${role.name}-${scope}" => {
-          name             = role.name
-          description      = role.description
-          scope            = scope
-          actions          = permission.actions
-          not_actions      = permission.not_actions
-          data_actions     = permission.data_actions
-          not_data_actions = permission.not_data_actions
-          }
-}]])...)
+      "${role.name}-${scope}" => {
+        name             = role.name
+        description      = role.description
+        scope            = scope
+        actions          = permission.actions
+        not_actions      = permission.not_actions
+        data_actions     = permission.data_actions
+        not_data_actions = permission.not_data_actions
+      }
+  }]])...)
 }
 
 resource "azurerm_role_definition" "custom_roles" {
