@@ -9,10 +9,10 @@ locals {
         name             = role.name
         description      = role.description
         scope            = scope
-        actions          = permission.actions
-        not_actions      = permission.not_actions
-        data_actions     = permission.data_actions
-        not_data_actions = permission.not_data_actions
+        actions          = role.permissions.actions
+        not_actions      = role.permissions.not_actions
+        data_actions     = role.permissions.data_actions
+        not_data_actions = role.permissions.not_data_actions
       }
   }]])...)
 }
