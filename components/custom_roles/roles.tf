@@ -1,6 +1,6 @@
 locals {
   role_definitions_yaml = file("${path.cwd}/role_definitions.yaml")
-  roles     = yamldecode(local.role_definitions_yaml).roles
+  roles                 = yamldecode(local.role_definitions_yaml).roles
 }
 
 resource "azurerm_role_definition" "custom_roles" {
