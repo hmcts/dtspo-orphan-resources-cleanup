@@ -3,9 +3,8 @@ locals {
   role_definitions      = yamldecode(local.role_definitions_yaml)
 
   role_scope_map = merge(flatten([
-    for role in local.role_definitions : [
-      for permission in role.permissions : {
-        for scope in permission.scopes :
+    for role in local.role_definitions : [{
+      for scope in role.permissions.scopes :
         "${role.name}-${scope}" => {
           name             = role.name
           description      = role.description
@@ -14,9 +13,8 @@ locals {
           not_actions      = permission.not_actions
           data_actions     = permission.data_actions
           not_data_actions = permission.not_data_actions
-
-        }
-  }]])...)
+          }
+}]])...)
 }
 
 resource "azurerm_role_definition" "custom_roles" {
