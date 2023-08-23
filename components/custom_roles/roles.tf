@@ -1,22 +1,19 @@
 locals {
   role_definitions_yaml = file("${path.cwd}/role_definitions.yaml")
-  role_definitions      = yamldecode(local.role_definitions_yaml)
+  roles     = yamldecode(local.role_definitions_yaml).roles
 }
 
 resource "azurerm_role_definition" "custom_roles" {
-  for_each = { for role in local.role_definitions : role.name => role }
+  for_each = local.roles[count.index].permissions.scopes
 
-  name        = each.value.name
-  description = each.value.description
-  scope       = each.value.permissions.scopes[0]
+  name        = local.roles[count.index].name
+  description = local.roles[count.index].description
+  scope       = each.key
 
   permissions {
-    actions          = each.value.permissions.actions
-    not_actions      = each.value.permissions.not_actions
-    data_actions     = each.value.permissions.data_actions
-    not_data_actions = each.value.permissions.not_data_actions
+    actions          = local.roles[count.index].permissions.actions
+    not_actions      = local.roles[count.index].permissions.not_actions
+    data_actions     = local.roles[count.index].permissions.data_actions
+    not_data_actions = local.roles[count.index].permissions.not_data_actions
   }
-
-  assignable_scopes = slice(each.value.permissions.scopes, 1, length(each.value.permissions.scopes))
-
 }
