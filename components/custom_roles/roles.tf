@@ -1,19 +1,35 @@
 locals {
   role_definitions_yaml = file("${path.cwd}/role_definitions.yaml")
-  roles                 = yamldecode(local.role_definitions_yaml).roles
+  role_definitions                 = yamldecode(local.role_definitions_yaml)
+
+role_scope_map = merge(flatten([
+    for role in var.role_definitions : [
+      for permission in app.permissions : {
+        for scope in permission.scopes :
+        "${role.name}-${scope}" => {
+          name                  = role.name
+          description = role.description
+          scope                = scope
+          actions = permission.actions
+          not_actions = permission.not_actions
+          data_actions = permission.data_actions
+          not_data_actions = permission.not_data_actions
+          
+        }
+  }]])...)
 }
 
 resource "azurerm_role_definition" "custom_roles" {
-  for_each = local.roles[count.index].permissions.scopes
+  for_each = local.role_scope_map
 
-  name        = local.roles[count.index].name
-  description = local.roles[count.index].description
-  scope       = each.key
+  name        = each.value.name
+  description = each.value.description
+  scope       = each.value.scope
 
   permissions {
-    actions          = local.roles[count.index].permissions.actions
-    not_actions      = local.roles[count.index].permissions.not_actions
-    data_actions     = local.roles[count.index].permissions.data_actions
-    not_data_actions = local.roles[count.index].permissions.not_data_actions
+    actions          = each.value.actions
+    not_actions      = each.value.not_actions
+    data_actions     = each.value.data_actions
+    not_data_actions = each.value.not_data_actions
   }
 }
