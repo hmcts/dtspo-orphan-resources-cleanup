@@ -17,6 +17,6 @@ resource "azurerm_role_definition" "custom_roles" {
     not_data_actions = each.value.permissions.not_data_actions
   }
 
-  assignable_scopes = each.value.permissions.scopes
+  assignable_scopes = slice(each.value.permissions.scopes, 1, length(each.value.permissions.scopes) - 1)
 
 }
