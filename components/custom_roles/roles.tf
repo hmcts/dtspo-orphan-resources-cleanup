@@ -3,7 +3,7 @@ locals {
   role_definitions      = yamldecode(local.role_definitions_yaml)
 
   role_scope_map = merge(flatten([
-    for role in var.role_definitions : [
+    for role in local.role_definitions : [
       for permission in role.permissions : {
         for scope in permission.scopes :
         "${role.name}-${scope}" => {
