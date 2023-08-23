@@ -4,7 +4,7 @@ locals {
 
   role_scope_map = merge(flatten([
     for role in var.role_definitions : [
-      for permission in app.permissions : {
+      for permission in role.permissions : {
         for scope in permission.scopes :
         "${role.name}-${scope}" => {
           name             = role.name
