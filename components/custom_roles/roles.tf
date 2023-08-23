@@ -1,20 +1,20 @@
 locals {
   role_definitions_yaml = file("${path.cwd}/role_definitions.yaml")
-  role_definitions                 = yamldecode(local.role_definitions_yaml)
+  role_definitions      = yamldecode(local.role_definitions_yaml)
 
-role_scope_map = merge(flatten([
+  role_scope_map = merge(flatten([
     for role in var.role_definitions : [
       for permission in app.permissions : {
         for scope in permission.scopes :
         "${role.name}-${scope}" => {
-          name                  = role.name
-          description = role.description
-          scope                = scope
-          actions = permission.actions
-          not_actions = permission.not_actions
-          data_actions = permission.data_actions
+          name             = role.name
+          description      = role.description
+          scope            = scope
+          actions          = permission.actions
+          not_actions      = permission.not_actions
+          data_actions     = permission.data_actions
           not_data_actions = permission.not_data_actions
-          
+
         }
   }]])...)
 }
