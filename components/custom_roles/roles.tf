@@ -18,16 +18,18 @@ locals {
 }
 
 resource "azurerm_role_definition" "custom_roles" {
-  for_each = local.role_scope_map
+  #for_each = local.role_scope_map
 
-  name        = each.value.name
-  description = each.value.description
-  scope       = each.value.scope
+  name        = "Orphan Resource Cleanup Read/Delete"
+  description = "Read and Resource Delete Access to applicably assigned scope"
+  scope       = "/providers/Microsoft.Management/managementGroups/CFT-Sandbox"
 
   permissions {
-    actions          = each.value.actions
-    not_actions      = each.value.not_actions
-    data_actions     = each.value.data_actions
-    not_data_actions = each.value.not_data_actions
+    actions          = ["*/read", "Microsoft.Resources/*/delete"]
+    not_actions      = []
+    data_actions     = []
+    not_data_actions = []
   }
+
+  assignable_scopes = ["/providers/Microsoft.Management/managementGroups/Platform-Prod"]
 }
