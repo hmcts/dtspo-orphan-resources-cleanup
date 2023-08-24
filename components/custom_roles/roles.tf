@@ -22,7 +22,7 @@ resource "azurerm_role_definition" "custom_roles" {
 
   name        = "Orphan Resource Cleanup Read/Delete"
   description = "Read and Resource Delete Access to applicably assigned scope"
-  scope       = "/providers/Microsoft.Management/managementGroups/CFT-Sandbox"
+  scope       = "/providers/Microsoft.Management/managementGroups/531ff96d-0ae9-462a-8d2d-bec7c0b42082"
 
   permissions {
     actions          = ["*/read", "Microsoft.Resources/*/delete"]
@@ -31,5 +31,4 @@ resource "azurerm_role_definition" "custom_roles" {
     not_data_actions = []
   }
 
-  assignable_scopes = ["/providers/Microsoft.Management/managementGroups/CFT-Sandbox", "/providers/Microsoft.Management/managementGroups/Platform-Prod"]
 }
