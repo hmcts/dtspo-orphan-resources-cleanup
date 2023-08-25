@@ -23,7 +23,7 @@ jobs:
       - name: 'Az CLI login'
         uses: azure/login@v1
         with:
-          client-id: 6a17262e-a18a-4bc2-b774-7411dfdd68fe # DTSPO Orphaned Resource Cleanup
+          client-id: c670b53f-74bc-4fa8-82c6-5577e8600d2a # DTSPO Orphaned Resource Cleanup 
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
           allow-no-subscriptions: true
       - name: Get slack webhook secret
@@ -50,7 +50,7 @@ jobs:
       - name: 'Az CLI login'
         uses: azure/login@v1
         with:
-          client-id: a1f7ea99-63f1-4b56-8813-a4b0ab781cf2 # DTSPO Orphaned Resource Cleanup
+          client-id: c670b53f-74bc-4fa8-82c6-5577e8600d2a # DTSPO Orphaned Resource Cleanup
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
           allow-no-subscriptions: true
       - name: Get slack webhook secret
