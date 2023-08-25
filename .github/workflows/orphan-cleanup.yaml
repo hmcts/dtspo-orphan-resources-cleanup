@@ -6,10 +6,10 @@ on:
       dryRunEnabled:
         description: 'Enable Dry-Run Mode'
         required: true
-        default: true
+        default: false
         type: boolean
-  #  schedule:
-  #    - cron: '0 19 * * *' # Every day at 8pm BST
+  schedule:
+    - cron: '0 9 * * *' # Every day at 8pm BST
 
 jobs:
   dry-run:
