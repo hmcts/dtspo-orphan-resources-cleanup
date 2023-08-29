@@ -50,7 +50,7 @@ orphan_queries=(
     # NSGs
     'Network Security Groups:resources | where type == "microsoft.network/networksecuritygroups" and isnull(properties.networkInterfaces) and isnull(properties.subnets)'
     # Resource Groups
-    'Resource Groups:ResourceContainers | where type == "microsoft.resources/subscriptions/resourcegroups" | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | join kind=leftouter (Resources | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | summarize count() by rgAndSub) on rgAndSub | where isnull(count_) | extend Details = pack_all() | project subscriptionId, Resource=id, count_, location, tags ,Details'
+    'Resource Groups:ResourceContainers | where type == "microsoft.resources/subscriptions/resourcegroups" | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | join kind=leftouter (Resources | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | summarize count() by rgAndSub) on rgAndSub | where isnull(count_)'
     # Public IPs
     'Public IPs:resources | where type == "microsoft.network/publicipaddresses" | where properties.ipConfiguration == ""'
     #  Network Interfaces
