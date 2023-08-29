@@ -5,8 +5,8 @@ SLACK_CHANNEL_NAME=$2
 RUN_OPTION=""
 
 role_def_name_match="Orphan Resource Cleanup Read/Delete"
-role_principal_match="DTS Bootstrap (sub:dcd-cft-sandbox)"
-role_principal_match_id="d45edc3f-b3b7-49d2-8228-be93b557b583"
+role_principal_match="DTS Orphaned Resource Cleanup"
+role_principal_match_id="c670b53f-74bc-4fa8-82c6-5577e8600d2a"
 
 # Mode option to run in dry run (default for pr build, give -m dry-run locally
 while getopts ":m:" opt; do
