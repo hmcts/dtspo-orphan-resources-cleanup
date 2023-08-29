@@ -6,8 +6,7 @@ SLACK_CHANNEL_NAME=$2
 RUN_OPTION=""
 
 role_def_name_match="Orphan Resource Cleanup Read/Delete"
-role_principal_match="DTS Orphaned Resource Cleanup"
-role_principal_match_id="c670b53f-74bc-4fa8-82c6-5577e8600d2a"
+role_principal_id_match="50cce126-c44a-48bb-9361-5f55868d3182"
 
 # Mode option to run in dry run (default for pr build, give -m dry-run locally
 while getopts ":m:" opt; do
@@ -80,10 +79,10 @@ for sub in "${subs[@]}"; do
 
     # grab roleDefinitonName & principalName for use in conditional evaluation
     sub_role_def_name=$(echo $role_block | jq '.roleDefinitionName' | tr -d '"')
-    sub_role_principal_name=$(echo $role_block | jq '.principalName' | tr -d '"')
+    sub_role_principal_id=$(echo $role_block | jq '.principalId' | tr -d '"')
 
     # Add sub to array if it has required role assignment and service principal
-    if [ "$sub_role_def_name" = "$role_def_name_match" ] && [[ "$sub_role_principal_name" = "$role_principal_match" || "$sub_role_principal_name" = "$role_principal_match_id" ]]; then
+    if [ "$sub_role_def_name" = "$role_def_name_match" ] && [ "$sub_role_principal_id" = "$role_principal_id_match" ]; then
       echo "role assignment matched."
       subs_with_match+=($sub)
       sub_names_with_match+=($name)
