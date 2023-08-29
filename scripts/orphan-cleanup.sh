@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Orphan Resources queries obtained from Orphan Resources Workbook
 # available at https://portal.azure.com/#@HMCTS.NET/resource/subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/platopsmonitor_test/providers/microsoft.insights/workbooks/03553b7d-6be1-459a-b747-7c69e21f5cb3/workbook
 WEBHOOK_URL=$1
@@ -40,23 +41,23 @@ az extension add --name resource-graph
 resources_to_delete=()
 orphan_queries=(
     # Load Balancers
-    'resources | where type == "microsoft.network/loadbalancers" | where properties.backendAddressPools == "[]" '
+    'Load Balancers:resources | where type == "microsoft.network/loadbalancers" | where properties.backendAddressPools == "[]" '
     # App Service Plans
-    'resources | where type =~ "microsoft.web/serverfarms" | where properties.numberOfSites == 0'
+    'App Service Plans:resources | where type =~ "microsoft.web/serverfarms" | where properties.numberOfSites == 0'
     # Route Tables
-    'resources | where type == "microsoft.network/routetables" | where isnull(properties.subnets)'
+    'Route Tables:resources | where type == "microsoft.network/routetables" | where isnull(properties.subnets)'
     # Availability Sets
-    'resources | where type =~ "Microsoft.Compute/availabilitySets" | where properties.virtualMachines == "[]"'
+    'Availability Sets:resources | where type =~ "Microsoft.Compute/availabilitySets" | where properties.virtualMachines == "[]"'
     # NSGs
-    'resources | where type == "microsoft.network/networksecuritygroups" and isnull(properties.networkInterfaces) and isnull(properties.subnets)'
+    'Network Security Groups:resources | where type == "microsoft.network/networksecuritygroups" and isnull(properties.networkInterfaces) and isnull(properties.subnets)'
     # Resource Groups
-    'ResourceContainers | where type == "microsoft.resources/subscriptions/resourcegroups" | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | join kind=leftouter (Resources | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | summarize count() by rgAndSub) on rgAndSub | where isnull(count_) | extend Details = pack_all() | project subscriptionId, Resource=id, count_, location, tags ,Details'
+    'Resource Groups:ResourceContainers | where type == "microsoft.resources/subscriptions/resourcegroups" | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | join kind=leftouter (Resources | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | summarize count() by rgAndSub) on rgAndSub | where isnull(count_) | extend Details = pack_all() | project subscriptionId, Resource=id, count_, location, tags ,Details'
     # Public IPs
-    'resources | where type == "microsoft.network/publicipaddresses" | where properties.ipConfiguration == ""'
+    'Public IPs:resources | where type == "microsoft.network/publicipaddresses" | where properties.ipConfiguration == ""'
     #  Network Interfaces
-    'resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
+    'Network Interfaces:resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
     # Disks
-    'resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
+    'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
 )
 
 # Fetch subscriptions to run commands against
@@ -64,10 +65,13 @@ subs=($(az account list | jq '.[].id' | tr -d '\n' | sed 's/""/ /g' | tr -d '"')
 
 # iterate subs, check for required role assignment, form concat'd string for future azcli commands
 subs_with_match=()
+subs_names_with_match=()
 for sub in "${subs[@]}"; do
+  # get the name
+  name=$(az account show --subscription $sub | jq '.name')
   # get assignments and create array of ids
-  echo checking $sub for required role assignment...
-  sub_role_assignments=$(az role assignment list --subscription $sub --output json)
+  echo checking $name for required role assignment...
+  sub_role_assignments=$(az role assignment list --subscription $sub --all --output json)
   sub_role_ids=($(echo $sub_role_assignments | jq -r '.[].name'))
 
   # iterate id array and get json def block for each role assignment
@@ -80,19 +84,25 @@ for sub in "${subs[@]}"; do
 
     # Add sub to array if it has required role assignment and service principal
     if [ "$sub_role_def_name" = "$role_def_name_match" ] && [[ "$sub_role_principal_name" = "$role_principal_match" || "$sub_role_principal_name" = "$role_principal_match_id" ]]; then
+      echo "role assignment matched."
       subs_with_match+=($sub)
+      sub_names_with_match+=($name)
       break
     fi
   done
 done
 subs_to_cleanup=${subs_with_match[@]}
+sub_names_to_cleanup=${sub_names_with_match[@]}
 
 
-echo "Subscriptions to run against: $subs_to_cleanup"
+echo "Subscriptions to run against: $sub_names_to_cleanup"
 
 # Graph query to fetch orphaned Resource IDs 
-for query in "${orphan_queries[@]}"
+for query_item in "${orphan_queries[@]}"
 do
+  query_name="${query_item%%:*}"
+  query="${query_item##*:}"
+  echo "checking for orphaned $query_name..."
   resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup | jq '.data[].id')
 done
 
