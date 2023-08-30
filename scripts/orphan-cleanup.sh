@@ -118,16 +118,16 @@ do
     echo "Dry-Run delete of: $resource\n"
   else
    echo "Attemping delete of: $resource\n"
-    # # Check if resource should be ignored by this automation, based on tag ignoredByOrphanCleanup: true
-    # ignoreResource=$(az resource show --ids $resource | jq '.tags.ignoredByOrphanCleanup')
-    # if [[ "$ignoreResource" =~ "true" ]] ; then
-    #   echo "Skipping $resource as it is tagged."
-    # else
-    #   if az resource delete --ids $resource ; then
-    #     echo "Successfully deleted!"
-    #   else
-    #     send_slack_message "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n"
-    #   fi
-    # fi
+    # Check if resource should be ignored by this automation, based on tag ignoredByOrphanCleanup: true
+    ignoreResource=$(az resource show --ids $resource | jq '.tags.ignoredByOrphanCleanup')
+    if [[ "$ignoreResource" =~ "true" ]] ; then
+      echo "Skipping $resource as it is tagged."
+    else
+      if az resource delete --ids $resource ; then
+        echo "Successfully deleted!"
+      else
+        send_slack_message "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n"
+      fi
+    fi
   fi
 done
