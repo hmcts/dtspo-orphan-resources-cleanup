@@ -63,5 +63,5 @@ jobs:
             echo "::add-mask::$value"
             echo "$secret_get=$value" >> $GITHUB_OUTPUT
           done
-      - name: Dry Run orphaned resources in Azure
+      - name: Delete orphaned resources in Azure
         run: ./scripts/orphan-cleanup.sh ${{ steps.azure-keyvault-secrets.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
