@@ -64,4 +64,4 @@ jobs:
             echo "$secret_get=$value" >> $GITHUB_OUTPUT
           done
       - name: Delete orphaned resources in Azure
-        run: ./scripts/orphan-cleanup.sh ${{ steps.azure-keyvault-secrets.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
+        run: ./scripts/orphan-cleanup.sh ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
