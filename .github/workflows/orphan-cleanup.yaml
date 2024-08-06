@@ -2,7 +2,7 @@ name: orphaned-resource-cleanup
 
 on:
   workflow_dispatch:
-   inputs:
+    inputs:
       dryRunEnabled:
         description: 'Enable Dry-Run Mode'
         required: true
@@ -23,7 +23,7 @@ jobs:
       - name: 'Az CLI login'
         uses: azure/login@v2
         with:
-          client-id: c670b53f-74bc-4fa8-82c6-5577e8600d2a # DTSPO Orphaned Resource Cleanup 
+          client-id: c670b53f-74bc-4fa8-82c6-5577e8600d2a # DTSPO Orphaned Resource Cleanup
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
           allow-no-subscriptions: true
       - name: Get slack webhook secret
@@ -38,7 +38,7 @@ jobs:
           done
       - name: Dry Run orphaned resources in Azure
         run: ./scripts/orphan-cleanup.sh -m dry-run ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
-  
+
   live:
     runs-on: ubuntu-latest
     permissions:
@@ -65,3 +65,5 @@ jobs:
           done
       - name: Delete orphaned resources in Azure
         run: ./scripts/orphan-cleanup.sh ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
+      - name: 'reset keepalive timer'
+        uses: gautamkrishnar/keepalive-workflow@v2
