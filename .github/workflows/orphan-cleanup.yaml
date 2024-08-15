@@ -65,5 +65,3 @@ jobs:
           done
       - name: Delete orphaned resources in Azure
         run: ./scripts/orphan-cleanup.sh ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
-      - name: 'reset keepalive timer'
-        uses: gautamkrishnar/keepalive-workflow@v2
