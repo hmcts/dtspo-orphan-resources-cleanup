@@ -26,18 +26,21 @@ jobs:
           client-id: c670b53f-74bc-4fa8-82c6-5577e8600d2a # DTSPO Orphaned Resource Cleanup
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
           allow-no-subscriptions: true
-      - name: Get slack webhook secret
-        id: slack-webhook
-        run: |
-          secrets_get=(orphaned-resources-slack-webhook)
-          for secret_get in ${secrets_get[@]}
-          do
-            value=$(az keyvault secret show --name $secret_get --vault-name cftptl-intsvc --query value --output tsv)
-            echo "::add-mask::$value"
-            echo "$secret_get=$value" >> $GITHUB_OUTPUT
-          done
+      # - name: Get slack webhook secret
+      #   id: slack-webhook
+      #   run: |
+      #     secrets_get=(orphaned-resources-slack-webhook)
+      #     for secret_get in ${secrets_get[@]}
+      #     do
+      #       value=$(az keyvault secret show --name $secret_get --vault-name cftptl-intsvc --query value --output tsv)
+      #       echo "::add-mask::$value"
+      #       echo "$secret_get=$value" >> $GITHUB_OUTPUT
+      #     done
       - name: Dry Run orphaned resources in Azure
         run: ./scripts/orphan-cleanup.sh -m dry-run ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
+      - name: Output deletion objects
+        run: |
+            cat ./status/deletionStatus.json
 
   live:
     runs-on: ubuntu-latest
@@ -53,15 +56,25 @@ jobs:
           client-id: c670b53f-74bc-4fa8-82c6-5577e8600d2a # DTSPO Orphaned Resource Cleanup
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
           allow-no-subscriptions: true
-      - name: Get slack webhook secret
-        id: slack-webhook
-        run: |
-          secrets_get=(orphaned-resources-slack-webhook)
-          for secret_get in ${secrets_get[@]}
-          do
-            value=$(az keyvault secret show --name $secret_get --vault-name cftptl-intsvc --query value --output tsv)
-            echo "::add-mask::$value"
-            echo "$secret_get=$value" >> $GITHUB_OUTPUT
-          done
+      # - name: Get slack webhook secret
+      #   id: slack-webhook
+      #   run: |
+      #     secrets_get=(orphaned-resources-slack-webhook)
+      #     for secret_get in ${secrets_get[@]}
+      #     do
+      #       value=$(az keyvault secret show --name $secret_get --vault-name cftptl-intsvc --query value --output tsv)
+      #       echo "::add-mask::$value"
+      #       echo "$secret_get=$value" >> $GITHUB_OUTPUT
+      #     done
       - name: Delete orphaned resources in Azure
-        run: ./scripts/orphan-cleanup.sh ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
+        run: ./scripts/orphan-cleanup.sh
+
+      - name: Commit deletino status json file
+        continue-on-error: true
+        run: |
+          git config user.name hmcts-platform-operations
+          git config user.email github-platform-operations@hmcts.net
+          git pull
+          git add ./status
+          git commit -m "Save failed deletions to json file"
+          git push

@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Orphan Resources queries obtained from Orphan Resources Workbook
 # available at https://portal.azure.com/#@HMCTS.NET/resource/subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/platopsmonitor_test/providers/microsoft.insights/workbooks/03553b7d-6be1-459a-b747-7c69e21f5cb3/workbook
-WEBHOOK_URL=$1
-SLACK_CHANNEL_NAME=$2
 RUN_OPTION=""
 
 role_def_name_match="Orphan Resource Cleanup Read/Delete"
@@ -25,12 +23,6 @@ while getopts ":m:" opt; do
       ;;
   esac
 done
-
-# Function to send slack message when a resource fails to delete
-function send_slack_message () {
-  echo "Deletion failed, to see why this occured please run: az resource delete --ids $resource --verbose"
-  curl -s -X POST --data-urlencode "payload={\"channel\": \"${SLACK_CHANNEL_NAME}\", \"username\": \"Plato\", \"text\": \"$1\", \"icon_emoji\": \":plato:\"}" $WEBHOOK_URL
-}
 
 # Install resource-graph
 echo "Installing resource-graph extension"
@@ -96,7 +88,7 @@ sub_names_to_cleanup=${sub_names_with_match[@]}
 
 echo "Subscriptions to run against: $sub_names_to_cleanup"
 
-# Graph query to fetch orphaned Resource IDs 
+# Graph query to fetch orphaned Resource IDs
 for query_item in "${orphan_queries[@]}"
 do
   query_name="${query_item%%:*}"
@@ -115,9 +107,11 @@ do
   # Trim " from resource, as az command also wraps with '
   resource=$(echo $resource | tr -d '"')
   if [[ "$RUN_OPTION" =~ "dry-run" ]] ; then
-    echo "Dry-Run delete of: $resource\n"
+    message=$(echo "Dry-Run delete of: $resource\n")
+    echo "$message"
+    jq -n --arg output "$message" '{message: $output}' >> failedDeletes.json
   else
-   echo "Attemping delete of: $resource\n"
+    echo "Attemping delete of: $resource\n"
     # Check if resource should be ignored by this automation, based on tag ignoredByOrphanCleanup: true
     ignoreResource=$(az resource show --ids $resource | jq '.tags.ignoredByOrphanCleanup')
     if [[ "$ignoreResource" =~ "true" ]] ; then
@@ -126,8 +120,12 @@ do
       if az resource delete --ids $resource ; then
         echo "Successfully deleted!"
       else
-        send_slack_message "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n"
+        message=$(echo "A resource failed to delete!\nTo see why, you can run: az resource delete --ids $resource --verbose\n")
+        echo "$message"
+        jq -n --arg output "$message" '{message: $output}' >> failedDeletes.json
       fi
     fi
   fi
 done
+# Convert failedDeletes.json to valid json file
+jq -s '.' failedDeletes.json > status/deletionStatus.json
