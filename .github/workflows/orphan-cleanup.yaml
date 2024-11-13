@@ -11,6 +11,9 @@ on:
   schedule:
     - cron: '0 9 * * *' # Every day at 8pm BST
 
+env:
+  GH_TOKEN: ${{ secrets.PLATFORM_USER_TOKEN }}
+
 jobs:
   dry-run:
     runs-on: ubuntu-latest
@@ -40,6 +43,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+          token: ${{ env.GH_TOKEN }}
       - name: 'Az CLI login'
         uses: azure/login@v2
         with:
