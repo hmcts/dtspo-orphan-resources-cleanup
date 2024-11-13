@@ -1,0 +1,1 @@
+Folder should contain a single json file for resources that failed to delete automatically.
