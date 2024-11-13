@@ -11,9 +11,6 @@ on:
   schedule:
     - cron: '0 9 * * *' # Every day at 8pm BST
 
-permissions:
-  contents: write
-
 jobs:
   dry-run:
     runs-on: ubuntu-latest
@@ -39,6 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
+      contents: write
     if: ${{ inputs.dryRunEnabled == false }}
     steps:
       - name: Checkout
