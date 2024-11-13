@@ -54,7 +54,7 @@ jobs:
           allow-no-subscriptions: true
       - name: Delete orphaned resources in Azure
         run: ./scripts/orphan-cleanup.sh
-      - name: Commit deletino status json file
+      - name: Commit deletion status json file
         continue-on-error: true
         run: |
           git config user.name hmcts-platform-operations
