@@ -57,6 +57,9 @@ jobs:
         run: |
           git config user.name hmcts-platform-operations
           git config user.email github-platform-operations@hmcts.net
+          git stash
+          git checkout failedDeletionStatus
+          git stash pop
           git add ./status
           git commit -m "Automated - save failed deletions to json file"
           git push --force
