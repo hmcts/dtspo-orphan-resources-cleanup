@@ -100,9 +100,6 @@ done
 # Solves problem of some resource ID's not having space between them in jq output
 resources_to_delete=$(sed 's/""/" "/g' <<< $resources_to_delete)
 
-# Create temp json file
-touch failedDeletes.json
-
 # Convert into array to loop over resources and sequentially (to record failures) delete them
 resources_to_delete=($resources_to_delete)
 for resource in "${resources_to_delete[@]}"
@@ -134,12 +131,17 @@ done
 #Clear down any existing file contents in final file
 true > status/deletionStatus.json
 
-failedDeleteCount=$(jq -s '. | length' failedDeletes.json)
+if [ -f failedDeletes.json ]; then
+  failedDeleteCount=$(jq -s '. | length' failedDeletes.json)
+else
+  failedDeleteCount=0
+fi
 
 # If there are more than 0 objects, print the object values into an array
 if [ "$failedDeleteCount" -gt 0 ]; then
   # Convert failedDeletes.json to valid json file and save
   jq -s '.' failedDeletes.json > status/deletionStatus.json
+  rm failedDeletes.json
 else
   echo "All resources deleted successfully"
   echo "[]" > status/deletionStatus.json
