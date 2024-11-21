@@ -246,9 +246,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ae75b9fb-7d34-4112-82ff-64bd3855ce27/resourceGroups/rg-bootstrap-nonprod/providers/Microsoft.Network/networkInterfaces/nic-boostrapvm --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/terraform-kt-rg/providers/Microsoft.Network/networkInterfaces/nic-rhel7 --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/cad00ede-36df-4e04-ad0b-d34a1e94ef76/resourceGroups/a360-c2x2555-uat/providers/Microsoft.Network/networkInterfaces/a360-c2x2555-dz-elk-nic --verbose\\n"
   },
   {
@@ -271,9 +268,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b3394340-6c9f-44ca-aa3e-9ff38bd1f9ac/resourceGroups/BASTION-SBOX-RG/providers/Microsoft.Compute/disks/bastion-sbox_OsDisk_1_ba30b6ff8b4e4af5b314bf8052b7d3d7 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/TERRAFORM-KT-RG/providers/Microsoft.Compute/disks/rhel7-test-vm_OsDisk_1_fb63257e7c1743c98d535d6b32f85d85 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-081e0d81-8ec8-4460-8936-254adfb044d3 --verbose\\n"
