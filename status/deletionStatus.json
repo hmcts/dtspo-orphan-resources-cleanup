@@ -6,6 +6,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/ks-rg/providers/Microsoft.Network/loadBalancers/ks-lb --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1fe7db01-9981-4ed3-983c-163dd50ba43a/resourceGroups/DACS-LAB-NW-11-RG/providers/Microsoft.Web/serverFarms/ASP-DACSLABNW11RG-9ad0 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/pre-test/providers/Microsoft.Web/serverFarms/pre-asp-pre-ams-integration --verbose\\n"
   },
   {
@@ -172,6 +175,9 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-20241114113840/providers/Microsoft.Network/publicIPAddresses/labs-ip-20241114113840 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-20241203174253/providers/Microsoft.Network/publicIPAddresses/labs-ip-20241203174253 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/MC_ss-sbox-01-rg_ss-sbox-01-aks_uksouth/providers/Microsoft.Network/publicIPAddresses/ca1077c5-e34c-46b2-99de-721219252eb4 --verbose\\n"
