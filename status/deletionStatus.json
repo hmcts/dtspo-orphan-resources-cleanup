@@ -27,9 +27,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/pretimestampburn/providers/Microsoft.Web/serverFarms/ASP-PRE-TimestampBurn-2a5e --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/c68a4bed-4c3d-4956-af51-4ae164c1957c/resourceGroups/pre-demo/providers/Microsoft.Web/serverFarms/pre-asp-pre-ams-integration --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ingest00functionappsboxn/providers/Microsoft.Web/serverFarms/ASP-ingest00-FunctionApp-sbox-nsa-9361 --verbose\\n"
   },
   {
@@ -192,10 +189,10 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-20241206153427/providers/Microsoft.Network/publicIPAddresses/labs-ip-20241206153427 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-20241209152632/providers/Microsoft.Network/publicIPAddresses/labs-ip-20241209152632 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-20241210140934/providers/Microsoft.Network/publicIPAddresses/labs-ip-20241210140934 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-ds-2412091832/providers/Microsoft.Network/publicIPAddresses/labs-ip-ds-2412091832 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-ds-2412101538/providers/Microsoft.Network/publicIPAddresses/labs-ip-ds-2412101538 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/MC_ss-sbox-01-rg_ss-sbox-01-aks_uksouth/providers/Microsoft.Network/publicIPAddresses/ca1077c5-e34c-46b2-99de-721219252eb4 --verbose\\n"
@@ -271,9 +268,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NTRANS-RG/providers/Microsoft.Network/networkInterfaces/NTRANS-MCOL-VM01-NIC --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-ds-2412091832/providers/Microsoft.Network/networkInterfaces/labs-nic-ds-2412091832 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ae75b9fb-7d34-4112-82ff-64bd3855ce27/resourceGroups/rg-bootstrap-nonprod/providers/Microsoft.Network/networkInterfaces/nic-boostrapvm --verbose\\n"
