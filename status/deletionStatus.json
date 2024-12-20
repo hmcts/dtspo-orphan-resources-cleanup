@@ -195,9 +195,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-ds-2412111357/providers/Microsoft.Network/publicIPAddresses/labs-ip-ds-2412111357 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/MC_ss-sbox-01-rg_ss-sbox-01-aks_uksouth/providers/Microsoft.Network/publicIPAddresses/ca1077c5-e34c-46b2-99de-721219252eb4 --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/ks-rg/providers/Microsoft.Network/publicIPAddresses/ks-pip --verbose\\n"
   },
   {
@@ -211,6 +208,9 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/hmcts-hub-sbox-int/providers/Microsoft.Network/publicIPAddresses/fw-uksouth-sbox-int-palo-lab-jamiemcconnell-goldenpath-pip --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/hmcts-hub-sbox-int/providers/Microsoft.Network/publicIPAddresses/fw-uksouth-sbox-int-palo-labs-goldenpath-jamie-pip --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/test-palo-idam/providers/Microsoft.Network/networkInterfaces/testpaloidam796 --verbose\\n"
