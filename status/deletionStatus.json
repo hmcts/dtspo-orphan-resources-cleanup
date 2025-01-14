@@ -183,9 +183,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-anne-20250106172422/providers/Microsoft.Network/publicIPAddresses/labs-ip-anne-20250106172422 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-ds-2501091410/providers/Microsoft.Network/publicIPAddresses/labs-ip-ds-2501091410 --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/ks-rg/providers/Microsoft.Network/publicIPAddresses/ks-pip --verbose\\n"
   },
   {
