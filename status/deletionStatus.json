@@ -286,5 +286,14 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-cd73d183-b5f0-4deb-ab80-78a2faf0faff --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/05e595e432394701b70a3e5bcd351271-containerRootVolume --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/c3f19cd151c34ed893c5e7cf5253d5a4-containerRootVolume --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/e9e428f50a7142199e1b20a23196711c-containerRootVolume --verbose\\n"
   }
 ]
