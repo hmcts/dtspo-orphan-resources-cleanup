@@ -294,13 +294,13 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/moj-mip-xsiam-rg/providers/Microsoft.Compute/disks/broker-vm-xsiam-24.5.1 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/CFT-ITHC-00-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-9ba1cfc6-515b-41f8-9c01-fdcd7fe79dca --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/cft-ithc-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-9ba1cfc6-515b-41f8-9c01-fdcd7fe79dca --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/CFT-PERFTEST-00-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-a3f104f6-e852-4bc9-8889-9de8e90f005f --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/cft-perftest-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-a3f104f6-e852-4bc9-8889-9de8e90f005f --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/CFT-PERFTEST-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-e9a2b01b-bdcb-4951-a6b1-313b12a86f01 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/cft-perftest-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-e9a2b01b-bdcb-4951-a6b1-313b12a86f01 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextcgimvmwtest-osdisk-20230627-120147 --verbose\\n"
