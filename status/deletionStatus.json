@@ -90,6 +90,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/idam-idam-perftest/providers/Microsoft.Network/networkSecurityGroups/idam-perftest-ASE-NSG --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/mgmt-perf-testing/providers/Microsoft.Network/networkSecurityGroups/mgmtperftestingvm02nsg678 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Network/networkSecurityGroups/Windows10test-nsg --verbose\\n"
   },
   {
@@ -150,7 +153,16 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/vh-perf-test-test/providers/Microsoft.Network/publicIPAddresses/vh-perf-test-test-pip-01 --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/core-infra-perftest/providers/Microsoft.Network/publicIPAddresses/core-infra-perftest-ip --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/core-infra-perftest/providers/Microsoft.Network/publicIPAddresses/core-infra-vnet-perftest-ip --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/mgmt-perf-testing/providers/Microsoft.Network/publicIPAddresses/mgmt-perf-testing-vm-00-pip --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/mgmt-perf-testing/providers/Microsoft.Network/publicIPAddresses/mgmt-perf-testing-vm-01-pip --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8ae5b3b6-0b12-4888-b894-4cec33c92292/resourceGroups/moj-mip-xsiam-dynatrace-broker/providers/Microsoft.Network/publicIPAddresses/moj-xsiam-dynatrace-broker-vm-ip --verbose\\n"
