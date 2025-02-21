@@ -24,6 +24,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/pretimestampburn/providers/Microsoft.Web/serverFarms/ASP-PRE-TimestampBurn-2a5e --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ariaarchivefa/providers/Microsoft.Web/serverFarms/ASP-ARIA-Archive-FA-e56c --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ingest00functionappsboxn/providers/Microsoft.Web/serverFarms/ASP-ingest00-FunctionApp-sbox-nsa-9361 --verbose\\n"
   },
   {
