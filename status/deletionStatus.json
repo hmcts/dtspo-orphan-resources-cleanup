@@ -318,10 +318,10 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/moj-mip-xsiam-rg/providers/Microsoft.Compute/disks/broker-vm-xsiam-24.5.1 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/SS-TEST-00-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-dc28bd62-1019-48a3-aa54-72d45b206d15 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/ss-test-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-dc28bd62-1019-48a3-aa54-72d45b206d15 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/SS-TEST-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-e9cb8592-c6fc-4c96-93f0-ed779c91aacc --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/ss-test-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-e9cb8592-c6fc-4c96-93f0-ed779c91aacc --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/cft-ithc-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-9ba1cfc6-515b-41f8-9c01-fdcd7fe79dca --verbose\\n"
@@ -342,16 +342,16 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/ss-dev-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-c5265856-d505-4f45-b781-5ae3c466b92c --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/CFT-PERFTEST-00-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-a3f104f6-e852-4bc9-8889-9de8e90f005f --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/cft-perftest-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-a3f104f6-e852-4bc9-8889-9de8e90f005f --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/CFT-PERFTEST-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-e9a2b01b-bdcb-4951-a6b1-313b12a86f01 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/cft-perftest-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-e9a2b01b-bdcb-4951-a6b1-313b12a86f01 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextcgimvmwtest-osdisk-20230627-120147 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/SS-SBOX-00-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-3959501b-c2b6-4e46-8566-733185cde56c --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-3959501b-c2b6-4e46-8566-733185cde56c --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b3394340-6c9f-44ca-aa3e-9ff38bd1f9ac/resourceGroups/BASTION-SBOX-RG/providers/Microsoft.Compute/disks/bastion-sbox_OsDisk_1_ba30b6ff8b4e4af5b314bf8052b7d3d7 --verbose\\n"
