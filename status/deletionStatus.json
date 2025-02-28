@@ -171,9 +171,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/cvp-recordings-sbox-rg/providers/Microsoft.Network/publicIPAddresses/cvp-recordings-sbox-nat-pip --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-niall-20250214142528/providers/Microsoft.Network/publicIPAddresses/labs-ip-niall-20250214142528 --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-roger-2502261325/providers/Microsoft.Network/publicIPAddresses/labs-ip-roger-2502261325 --verbose\\n"
   },
   {
