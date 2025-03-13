@@ -96,6 +96,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/hmi-sharedinfra-sbox-rg/providers/Microsoft.Network/networkSecurityGroups/hmi-sharedinfra-nsg-sbox --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-roger-2502261325/providers/Microsoft.Network/networkSecurityGroups/basicNsglabs-vnet-roger-2502261325-nic01 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/pre-sbox/providers/Microsoft.Network/networkSecurityGroups/pre-sftp-voda-nsg --verbose\\n"
   },
   {
@@ -166,9 +169,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/cvp-recordings-sbox-rg/providers/Microsoft.Network/publicIPAddresses/cvp-recordings-sbox-nat-pip --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-roger-2502261325/providers/Microsoft.Network/publicIPAddresses/labs-ip-roger-2502261325 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/c68a4bed-4c3d-4956-af51-4ae164c1957c/resourceGroups/vh-perf-test-demo/providers/Microsoft.Network/publicIPAddresses/vh-perf-test-demo-pip-01 --verbose\\n"
