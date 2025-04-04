@@ -237,6 +237,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ae75b9fb-7d34-4112-82ff-64bd3855ce27/resourceGroups/rg-bootstrap-nonprod/providers/Microsoft.Network/networkInterfaces/nic-boostrapvm --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/ccd-elastic-search-sbox/providers/Microsoft.Network/networkInterfaces/test-vm-ccd-elastic-search-nic --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/cad00ede-36df-4e04-ad0b-d34a1e94ef76/resourceGroups/a360-c2x2555-uat/providers/Microsoft.Network/networkInterfaces/a360-c2x2555-dz-elk-nic --verbose\\n"
   },
   {
