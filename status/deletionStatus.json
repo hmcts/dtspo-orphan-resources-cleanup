@@ -171,9 +171,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/rg-ingest-sbox-uk-main/providers/Microsoft.Network/publicIPAddresses/ingest00-legacy-sql-pip-sbox --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/hmcts-hub-sbox-int/providers/Microsoft.Network/publicIPAddresses/fw-uksouth-sbox-int-palo-labs-kainosrogery-nodejs-pip --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/test-palo-idam/providers/Microsoft.Network/networkInterfaces/testpaloidam796 --verbose\\n"
   },
   {
@@ -235,9 +232,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ae75b9fb-7d34-4112-82ff-64bd3855ce27/resourceGroups/rg-bootstrap-nonprod/providers/Microsoft.Network/networkInterfaces/nic-boostrapvm --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/ccd-elastic-search-sbox/providers/Microsoft.Network/networkInterfaces/test-vm-ccd-elastic-search-nic --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/cad00ede-36df-4e04-ad0b-d34a1e94ef76/resourceGroups/a360-c2x2555-uat/providers/Microsoft.Network/networkInterfaces/a360-c2x2555-dz-elk-nic --verbose\\n"
