@@ -63,6 +63,15 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1fe7db01-9981-4ed3-983c-163dd50ba43a/resourceGroups/DACS-LAB-AV-S28/providers/Microsoft.Network/networkSecurityGroups/DACS-DTS-AV-S28-VM-1-nsg --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/ss-test-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-40990665-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/ss-test-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-40990665-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/cft-ithc-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-74740245-nsg --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/core-infra-ithc-rg/providers/Microsoft.Network/networkSecurityGroups/pentest-bastion-nsg --verbose\\n"
   },
   {
@@ -81,6 +90,18 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/mgmt-perf-testing/providers/Microsoft.Network/networkSecurityGroups/mgmtperftestingvm02nsg678 --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/ss-dev-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-42109181-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/cft-perftest-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-81166528-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/cft-perftest-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-81166528-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-57921262-nsg --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Network/networkSecurityGroups/Windows10test-nsg --verbose\\n"
   },
   {
@@ -90,7 +111,34 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/pre-sbox/providers/Microsoft.Network/networkSecurityGroups/pre-sftp-voda-nsg --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-32411976-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-32411976-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/cft-sbox-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-23651290-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/cft-sbox-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-23651290-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ba71a911-e0d6-4776-a1a6-079af1df7139/resourceGroups/ss-ithc-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-40003699-nsg --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/cnp-core-palo-device/providers/Microsoft.Network/networkSecurityGroups/DefaultNSG --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/c68a4bed-4c3d-4956-af51-4ae164c1957c/resourceGroups/ss-demo-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-33656585-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/c68a4bed-4c3d-4956-af51-4ae164c1957c/resourceGroups/ss-demo-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-33656585-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-25349269-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-25349269-nsg --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d24c931e-2e6d-4508-8583-85ac42715580/resourceGroups/dsvm-test_group/providers/Microsoft.Network/networkSecurityGroups/dsvm-test-nsg --verbose\\n"
@@ -246,7 +294,40 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/moj-mip-xsiam-rg/providers/Microsoft.Compute/disks/broker-vm-xsiam-24.5.1 --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/SS-TEST-00-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-dc28bd62-1019-48a3-aa54-72d45b206d15 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/SS-TEST-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-e9cb8592-c6fc-4c96-93f0-ed779c91aacc --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/cft-ithc-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-9ba1cfc6-515b-41f8-9c01-fdcd7fe79dca --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/SS-DEV-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-488f116f-cc09-49a4-8ef7-ca35e49e0785 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/SS-DEV-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-7d6ce25c-9b42-493f-897a-fcd22f03c029 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/SS-DEV-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-7f822938-dba7-4331-a3ef-3635995d8472 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/SS-DEV-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-bd88595e-1562-42f0-95fc-cdf8d8f6958e --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/SS-DEV-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-c5265856-d505-4f45-b781-5ae3c466b92c --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/cft-perftest-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-a3f104f6-e852-4bc9-8889-9de8e90f005f --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8a07fdcd-6abd-48b3-ad88-ff737a4b9e3c/resourceGroups/cft-perftest-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-e9a2b01b-bdcb-4951-a6b1-313b12a86f01 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextcgimvmwtest-osdisk-20230627-120147 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-3959501b-c2b6-4e46-8566-733185cde56c --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b3394340-6c9f-44ca-aa3e-9ff38bd1f9ac/resourceGroups/BASTION-SBOX-RG/providers/Microsoft.Compute/disks/bastion-sbox_OsDisk_1_ba30b6ff8b4e4af5b314bf8052b7d3d7 --verbose\\n"
@@ -255,12 +336,39 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b44eb479-9ae2-42e7-9c63-f3c599719b6f/resourceGroups/JUMPBOX-NONPROD-RG/providers/Microsoft.Compute/disks/jbox01-nonprod_OsDisk_1_554d9e263b814fd083b3d237c162a5ad --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/cft-sbox-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-3c51a5ae-0d21-4b97-841e-c89a51549749 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ba71a911-e0d6-4776-a1a6-079af1df7139/resourceGroups/ss-ithc-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-7135f686-1f85-434a-90df-ef5a2bf21ab6 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/c68a4bed-4c3d-4956-af51-4ae164c1957c/resourceGroups/ss-demo-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-2b2e8e4c-812b-4059-9329-a73c2d196d19 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/c68a4bed-4c3d-4956-af51-4ae164c1957c/resourceGroups/ss-demo-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-c1337d92-e2fe-4880-ad6e-f74d6f5c8b24 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-081e0d81-8ec8-4460-8936-254adfb044d3 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-69f6bd66-bc75-4930-a55d-83b21bcb5b30 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-6b36c32c-22b4-48e2-b824-7c5f89aea605 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-cd73d183-b5f0-4deb-ab80-78a2faf0faff --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-0b473d75-98ab-404c-b656-4f023f1f8055 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-1f3776bb-a886-449a-85fc-8b0aadc5dc7f --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-3a298135-72bf-45a0-bb58-4b4fcf146b7f --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-54fab744-6472-4729-8ecc-badce355e610 --verbose\\n"
   }
 ]
