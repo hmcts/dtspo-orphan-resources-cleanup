@@ -1,17 +1,5 @@
 [
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-idam-preview/providers/Microsoft.Network/loadBalancers/forgerock-am-idam-preview-lb --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-idam-preview/providers/Microsoft.Network/loadBalancers/forgerock-am-idam-preview-lb-outbound --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-idam-preview/providers/Microsoft.Network/loadBalancers/forgerock-ds-tokenstore-idam-preview-lb --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-idam-preview/providers/Microsoft.Network/loadBalancers/forgerock-ds-tokenstore-idam-preview-lb-outbound --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/ciaran-test/providers/Microsoft.Network/loadBalancers/cpc-lb --verbose\\n"
   },
   {
@@ -132,12 +120,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/xui-terms-and-conditions-data-aat --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-idam-preview/providers/Microsoft.Network/publicIPAddresses/forgerock-ds-userstore-idam-preview-lb-outbound --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-idam-preview/providers/Microsoft.Network/publicIPAddresses/forgerock-idm-idam-preview-lb-outbound --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-preview/providers/Microsoft.Network/publicIPAddresses/core-infra-preview-publicIp1 --verbose\\n"
   },
   {
@@ -187,6 +169,9 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/rg-ingest-sbox-uk-main/providers/Microsoft.Network/publicIPAddresses/ingest00-legacy-sql-pip-sbox --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/hmcts-hubx-cngfw-poc/providers/Microsoft.Network/publicIPAddresses/cnfgw-fe-pip --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/test-palo-idam/providers/Microsoft.Network/networkInterfaces/testpaloidam796 --verbose\\n"
