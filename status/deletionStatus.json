@@ -45,9 +45,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/hmi-sharedinfra-sbox-rg/providers/Microsoft.Network/routeTables/hmi-sharedinfra-rt-sbox --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-danielalves-20250402155213/providers/Microsoft.Network/routeTables/labs-rt-danielalves-20250402155213 --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ae75b9fb-7d34-4112-82ff-64bd3855ce27/resourceGroups/InternalSpoke-rg/providers/Microsoft.Network/routeTables/NLE-INTERNAL-RT-DEVOPS-TEMP --verbose\\n"
   },
   {
@@ -88,9 +85,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/hmi-sharedinfra-sbox-rg/providers/Microsoft.Network/networkSecurityGroups/hmi-sharedinfra-nsg-sbox --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-danielalves-20250402155213/providers/Microsoft.Network/networkSecurityGroups/labs-nsg-danielalves-20250402155213 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/pre-sbox/providers/Microsoft.Network/networkSecurityGroups/pre-sftp-voda-nsg --verbose\\n"
@@ -253,9 +247,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextcgimvmwtest-osdisk-20230627-120147 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/LABS-RG-DANIELALVES-20250402155213/providers/Microsoft.Compute/disks/labs-vnet-danielalves-20250402155213_OsDisk_1_e6293e3a69b6465fa0e8d1791ecdeeec --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b3394340-6c9f-44ca-aa3e-9ff38bd1f9ac/resourceGroups/BASTION-SBOX-RG/providers/Microsoft.Compute/disks/bastion-sbox_OsDisk_1_ba30b6ff8b4e4af5b314bf8052b7d3d7 --verbose\\n"
