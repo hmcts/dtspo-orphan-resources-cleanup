@@ -252,6 +252,30 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b44eb479-9ae2-42e7-9c63-f3c599719b6f/resourceGroups/JUMPBOX-NONPROD-RG/providers/Microsoft.Compute/disks/jbox01-nonprod_OsDisk_1_554d9e263b814fd083b3d237c162a5ad --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/disks/ccd-data-0-datadisk1 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/disks/ccd-data-0-datadisk2 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/disks/ccd-data-1-datadisk1 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/disks/ccd-data-1-datadisk2 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/disks/ccd-data-2-datadisk1 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/disks/ccd-data-2-datadisk2 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/disks/ccd-data-3-datadisk1 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/disks/ccd-data-3-datadisk2 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d025fece-ce99-4df2-b7a9-b649d3ff2060/resourceGroups/cft-demo-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-081e0d81-8ec8-4460-8936-254adfb044d3 --verbose\\n"
   },
   {
