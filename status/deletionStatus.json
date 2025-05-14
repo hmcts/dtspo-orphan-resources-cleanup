@@ -3,6 +3,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/ciaran-test/providers/Microsoft.Network/loadBalancers/cpc-lb --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1fe7db01-9981-4ed3-983c-163dd50ba43a/resourceGroups/DACSlab-HW002-rg/providers/Microsoft.Web/serverFarms/HW002-sp1 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/pre-test/providers/Microsoft.Web/serverFarms/pre-asp-pre-ams-integration --verbose\\n"
   },
   {
