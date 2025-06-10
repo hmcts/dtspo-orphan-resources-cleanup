@@ -44,7 +44,7 @@ orphan_queries=(
     # Resource Groups
     'Resource Groups:ResourceContainers | where type == "microsoft.resources/subscriptions/resourcegroups" | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | join kind=leftouter (Resources | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | summarize count() by rgAndSub) on rgAndSub | where isnull(count_)'
     # Public IPs
-    'Public IPs:resources | where type == "microsoft.network/publicipaddresses" | where properties.ipConfiguration == ""'
+    'Public IPs:resources | where type == "microsoft.network/publicipaddresses" | where isnull(properties.ipAddress) or properties.ipAddress == ""'
     #  Network Interfaces
     'Network Interfaces:resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
     # Disks
