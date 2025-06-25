@@ -1,14 +1,1 @@
-[
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/6fe2c66c-ef6f-4064-9ced-95ac3fb8966f/resourceGroups/uipath-robotic-scaleset/providers/Microsoft.Network/publicIPAddresses/nle-robot-scalesetLBPublicIP --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/cdc31e8e-43f4-4c8a-8b50-635e954c27d3/resourceGroups/robotics-win10-rg/providers/Microsoft.Network/publicIPAddresses/roboticswin10vm-ip --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/cdc31e8e-43f4-4c8a-8b50-635e954c27d3/resourceGroups/uipath-robot-scaleset-win10/providers/Microsoft.Network/publicIPAddresses/stg-robot-scaleset-win10LBPublicIP --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/cdc31e8e-43f4-4c8a-8b50-635e954c27d3/resourceGroups/uipath-robot-scaleset/providers/Microsoft.Network/publicIPAddresses/stg-robot-scalesetLBPublicIP --verbose\\n"
-  }
-]
+[]
