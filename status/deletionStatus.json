@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-main-stg/providers/Microsoft.Web/serverFarms/af-aplfpa-stg00-uks-dlrm-01 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-main-stg/providers/Microsoft.Web/serverFarms/af-aplfta-stg00-uks-dlrm-01 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-main-stg/providers/Microsoft.Web/serverFarms/af-apluta-stg00-uks-dlrm-01 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-main-stg/providers/Microsoft.Web/serverFarms/af-bails-stg00-uks-dlrm-01 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-main-stg/providers/Microsoft.Web/serverFarms/af-joh-stg00-uks-dlrm-01 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-main-stg/providers/Microsoft.Web/serverFarms/af-sbails-stg00-uks-dlrm-01 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-main-stg/providers/Microsoft.Web/serverFarms/af-td-stg00-uks-dlrm-01 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1fe7db01-9981-4ed3-983c-163dd50ba43a/resourceGroups/DACSLAB-HW008-RG/providers/Microsoft.Compute/disks/HW008-vm1_OsDisk_1_8430fc2b21c649cf9d66ce52ecf3b4e2 --verbose\\n"
+  }
+]
