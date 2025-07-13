@@ -54,7 +54,7 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/ss-dev-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-c5265856-d505-4f45-b781-5ae3c466b92c --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/SS-SBOX-00-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-3959501b-c2b6-4e46-8566-733185cde56c --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-3959501b-c2b6-4e46-8566-733185cde56c --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/cft-sbox-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-3c51a5ae-0d21-4b97-841e-c89a51549749 --verbose\\n"
