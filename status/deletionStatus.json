@@ -4,23 +4,5 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/sbox-01-rg/providers/Microsoft.Network/networkSecurityGroups/F5-xsiam-test-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/160b18c7915d43cba768cc89d817fe85-containerRootVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/160b18c7915d43cba768cc89d817fe85-osDisk --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/71afb0d2fbd44e979370286caa29bdf7-containerRootVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/71afb0d2fbd44e979370286caa29bdf7-osDisk --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/f9a18094688c47608a359d83c7552724-containerRootVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/f9a18094688c47608a359d83c7552724-osDisk --verbose\\n"
   }
 ]
