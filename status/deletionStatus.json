@@ -3,21 +3,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ingest02-main-sbox/providers/Microsoft.Web/serverFarms/ASP-ingest02mainsbox-a758 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/sbox-01-rg/providers/Microsoft.Network/networkSecurityGroups/F5-xsiam-test-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/next-rg/providers/Microsoft.Network/networkInterfaces/NEXT-WIN-UPD-01-NIC --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/NEXT-WIN-UPD-01-DATA-DISK-1 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/NEXT-WIN-UPD-01-OS-DISK --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/NEXT-WIN-UPD-01_lun_10_2_70951f51dc3e45d1bd9e13afd5568afd --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextmgmtvmw-osdisk-20210426-120627 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NPCOL-RG/providers/Microsoft.Compute/disks/nextmgmtvml-osdisk-20210426-121151 --verbose\\n"
   }
 ]
