@@ -7,11 +7,5 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NPCOL-RG/providers/Microsoft.Compute/disks/nextmgmtvml-osdisk-20210426-121151 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/cad00ede-36df-4e04-ad0b-d34a1e94ef76/resourceGroups/A360-C2X2555-OPENSEARCH-RG/providers/Microsoft.Compute/disks/pvc-09d17a4c-61d5-44a1-8591-e0ed6bb42fd8 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/cad00ede-36df-4e04-ad0b-d34a1e94ef76/resourceGroups/A360-C2X2555-OPENSEARCH-RG/providers/Microsoft.Compute/disks/pvc-e845b7fd-de97-400c-81ca-1df9ac857bc7 --verbose\\n"
   }
 ]
