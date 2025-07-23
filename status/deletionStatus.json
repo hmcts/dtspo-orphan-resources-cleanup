@@ -1,6 +1,15 @@
 [
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ingest02-main-sbox/providers/Microsoft.Web/serverFarms/ASP-ingest02mainsbox-a758 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CFT-PREVIEW-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-27f87ec5-a368-4f1b-a126-6b6b3c942786 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CFT-PREVIEW-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-47dd4ee5-32b3-477b-a9d9-cdfdf1f5d629 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CFT-PREVIEW-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-4d43efc7-58c0-4096-8b57-e7dcfad95223 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CFT-PREVIEW-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-8634a047-6293-48a8-88f9-260a3d1d07c6 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextmgmtvmw-osdisk-20210426-120627 --verbose\\n"
