@@ -3,9 +3,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/mip-temp-workstation-xsiam-broker/providers/Microsoft.Network/networkSecurityGroups/mip-temp-workstationXSIAM-nsg --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Network/networkInterfaces/NEXT-CGI-M-VM-W-nic-43ffa09c47bc4a7c91d5c06f0b90dd99 --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-4d43efc7-58c0-4096-8b57-e7dcfad95223 --verbose\\n"
   },
   {
