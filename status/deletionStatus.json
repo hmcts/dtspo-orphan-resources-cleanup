@@ -1,6 +1,12 @@
 [
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-mano-2507291426/providers/Microsoft.Network/routeTables/labs-rt-mano-2507291426 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/mip-temp-workstation-xsiam-broker/providers/Microsoft.Network/networkSecurityGroups/mip-temp-workstationXSIAM-nsg --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-mano-2507291426/providers/Microsoft.Network/networkSecurityGroups/labs-nsg-mano-2507291426 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8ae5b3b6-0b12-4888-b894-4cec33c92292/resourceGroups/moj-mip-xsiam-dynatrace-broker/providers/Microsoft.Network/networkInterfaces/moj-xsiam-dynatrace-broker-vm976_z1 --verbose\\n"
@@ -22,6 +28,9 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NPCOL-RG/providers/Microsoft.Compute/disks/nextmgmtvml-osdisk-20210426-121151 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/LABS-RG-MANO-2507291426/providers/Microsoft.Compute/disks/labs-vnet-mano-2507291426_OsDisk_1_3cd0414ea35c4fac8cd53301342b89a5 --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ae75b9fb-7d34-4112-82ff-64bd3855ce27/resourceGroups/NINT-RG/providers/Microsoft.Compute/disks/nintcgimvmw-osdisk-20210419-102539 --verbose\\n"
