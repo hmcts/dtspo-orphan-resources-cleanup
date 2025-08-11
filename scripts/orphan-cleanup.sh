@@ -146,4 +146,3 @@ else
   echo "All resources deleted successfully"
   echo "[]" > status/deletionStatus.json
 fi
-
