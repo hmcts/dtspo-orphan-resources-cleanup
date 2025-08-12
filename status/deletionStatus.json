@@ -1,21 +1,9 @@
 [
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-20250728151339/providers/Microsoft.Network/routeTables/labs-rt-20250728151339 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1fe7db01-9981-4ed3-983c-163dd50ba43a/resourceGroups/DACSlab-AS001/providers/Microsoft.Network/networkSecurityGroups/idamcrimensg880 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8ae5b3b6-0b12-4888-b894-4cec33c92292/resourceGroups/moj-mip-xsiam-dynatrace-broker/providers/Microsoft.Network/networkSecurityGroups/moj-xsiam-dynatrace-broker-vm-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/labs-rg-20250728151339/providers/Microsoft.Network/networkSecurityGroups/labs-nsg-20250728151339 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/CORE-INFRA-IDAM-PERFTEST/providers/Microsoft.Compute/disks/idam-perftest-jumpbox_OsDisk_1_1baa8f80769947498ba7ded889375c08 --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CACTUS-DEV-RG/providers/Microsoft.Compute/disks/cactus-dev-vm01_OsDisk_1_263f9c01c6f142599159fc481da22e2d --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CFT-PREVIEW-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-2f26abe8-3f28-4857-9d21-5b7d713f438b --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-4d43efc7-58c0-4096-8b57-e7dcfad95223 --verbose\\n"
@@ -28,71 +16,5 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextmgmtvmw-osdisk-20210426-120627 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/LABS-RG-20250728151339/providers/Microsoft.Compute/disks/labs-vnet-20250728151339_OsDisk_1_3a0043949f0d473fbbd01574dc456342 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_0ff41849dca34eef8f772eb475517ce8 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_1796265d21f04d809c2c235d980aad67 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_19e48dd6edda4598a8408ad3cc6862f4 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_246c7cb270404304bbd90f29ae48d429 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_3260e2ecf049439fb5fe58c117decaee --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_461e7b1a9ada400da45ba225226ef7ee --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_56bd5575c29b430f98ca8c7c59c5d4a0 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_57cc6781e23c4f1b8400190f144f037e --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_5de237b9602149e0b376ab3fd26109b5 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_5f4c2d72b53b43759c4ecb270a3748a4 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_663bd0849f694149881ddc351acfb5a8 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_80df6ded5f0542759ecb5d8737f6a6a5 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_a9a00710f6f742869262fb69ae0fccca --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_b766b51a188e4962b87c53249ae2fc01 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_ba9ee382b0d34be3b534df4c5ecd77a0 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_c92658e9d4dd4f469afcbada2c3e589e --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_ce0ca706082547fe9e8f71468cce922e --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_d076fe57346c40a28de4dbb09b994633 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_d82fe23e31184ddb9db8036058ada76d --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_e9916be03c0c42579efb6caf47b960ef --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/CORE-INFRA-IDAM-SANDBOX/providers/Microsoft.Compute/disks/idam-sandbox-jumpbox_OsDisk_1_fcc08cd003bc44e6bf1a788a0c66fabf --verbose\\n"
   }
 ]
