@@ -3,7 +3,7 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CACTUS-DEV-RG/providers/Microsoft.Compute/disks/cactus-dev-vm01_OsDisk_1_263f9c01c6f142599159fc481da22e2d --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CFT-PREVIEW-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-2f26abe8-3f28-4857-9d21-5b7d713f438b --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-2f26abe8-3f28-4857-9d21-5b7d713f438b --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-01-aks-node-rg/providers/Microsoft.Compute/disks/pvc-4d43efc7-58c0-4096-8b57-e7dcfad95223 --verbose\\n"
@@ -13,8 +13,5 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextcgimvmw-osdisk-20210426-121600 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextmgmtvmw-osdisk-20210426-120627 --verbose\\n"
   }
 ]
