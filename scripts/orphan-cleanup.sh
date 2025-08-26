@@ -49,10 +49,9 @@ orphan_queries=(
     'Public IPs:resources | where type == "microsoft.network/publicipaddresses" | where isnull(properties.ipAddress) or properties.ipAddress == ""'
     #  Network Interfaces
     'Network Interfaces:resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
-    # Disks
-    "Disks:resources | where type has 'microsoft.compute/disks' | extend diskState = tostring(properties.diskState), createdOn = todatetime(properties.timeCreated) | where isnull(managedBy) or managedBy == '' | where diskState ==~ 'Unattached' | where not(name endswith '-ASRReplica' or name startswith 'ms-asr-') | where createdOn < ago(${PVC_RETENTION_DAYS}d)"
+  # Disks
+   'Disks:resources | where type has 'microsoft.compute/disks' | extend diskState = tostring(properties.diskState), createdOn = todatetime(properties.timeCreated) | where isnull(managedBy) or managedBy == '' | where diskState =~ 'Unattached' | where not(name endswith '-ASRReplica' or name startswith 'ms-asr-') | where createdOn < ago(${PVC_RETENTION_DAYS}d)'
 )
-
 # Fetch subscriptions to run commands against
 subs=($(az account list | jq '.[].id' | tr -d '\n' | sed 's/""/ /g' | tr -d '"'))
 
