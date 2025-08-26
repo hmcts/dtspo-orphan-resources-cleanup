@@ -9,12 +9,6 @@ PVC_RETENTION_DAYS=${PVC_RETENTION_DAYS:-7}
 role_def_name_match="Orphan Resource Cleanup Read/Delete"
 role_principal_id_match="50cce126-c44a-48bb-9361-5f55868d3182"
 
-# Validate PVC_RETENTION_DAYS is a positive integer
-if ! [[ "$PVC_RETENTION_DAYS" =~ ^[0-9]+$ ]]; then
-  echo "PVC_RETENTION_DAYS must be an integer (days), got: '$PVC_RETENTION_DAYS'" >&2
-  exit 1
-fi
-
 # Install resource-graph
 echo "Installing resource-graph extension"
 az config set extension.use_dynamic_install=yes_prompt
