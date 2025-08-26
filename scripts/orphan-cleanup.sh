@@ -9,29 +9,6 @@ PVC_RETENTION_DAYS=${PVC_RETENTION_DAYS:-7}
 role_def_name_match="Orphan Resource Cleanup Read/Delete"
 role_principal_id_match="50cce126-c44a-48bb-9361-5f55868d3182"
 
-# Mode option to run in dry run (default for pr build, give -m dry-run locally)
-# -r <days> to set PVC retention threshold
-while getopts ":m:r:" opt; do
-  case $opt in
-    m)
-      echo "-m (mode) option was triggered with parameter: $OPTARG" >&2
-      RUN_OPTION=$OPTARG
-      ;;
-    r)
-      echo "-r (PVC retention days) set to: $OPTARG" >&2
-      PVC_RETENTION_DAYS=$OPTARG
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG" >&2
-      exit 1
-      ;;
-    :)
-      echo "Option -$OPTARG requires an argument." >&2
-      exit 1
-      ;;
-  esac
-done
-
 # Validate PVC_RETENTION_DAYS is a positive integer
 if ! [[ "$PVC_RETENTION_DAYS" =~ ^[0-9]+$ ]]; then
   echo "PVC_RETENTION_DAYS must be an integer (days), got: '$PVC_RETENTION_DAYS'" >&2
