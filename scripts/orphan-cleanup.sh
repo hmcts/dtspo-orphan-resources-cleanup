@@ -3,15 +3,23 @@
 # available at https://portal.azure.com/#@HMCTS.NET/resource/subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/platopsmonitor_test/providers/microsoft.insights/workbooks/03553b7d-6be1-459a-b747-7c69e21f5cb3/workbook
 RUN_OPTION=""
 
+# Retention threshold (in days) for unattached AKS PVC-related disks before deletion
+PVC_RETENTION_DAYS=${PVC_RETENTION_DAYS:-7}
+
 role_def_name_match="Orphan Resource Cleanup Read/Delete"
 role_principal_id_match="50cce126-c44a-48bb-9361-5f55868d3182"
 
-# Mode option to run in dry run (default for pr build, give -m dry-run locally
-while getopts ":m:" opt; do
+# Mode option to run in dry run (default for pr build, give -m dry-run locally)
+# -r <days> to set PVC retention threshold
+while getopts ":m:r:" opt; do
   case $opt in
     m)
       echo "-m (mode) option was triggered with parameter: $OPTARG" >&2
       RUN_OPTION=$OPTARG
+      ;;
+    r)
+      echo "-r (PVC retention days) set to: $OPTARG" >&2
+      PVC_RETENTION_DAYS=$OPTARG
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -23,6 +31,12 @@ while getopts ":m:" opt; do
       ;;
   esac
 done
+
+# Validate PVC_RETENTION_DAYS is a positive integer
+if ! [[ "$PVC_RETENTION_DAYS" =~ ^[0-9]+$ ]]; then
+  echo "PVC_RETENTION_DAYS must be an integer (days), got: '$PVC_RETENTION_DAYS'" >&2
+  exit 1
+fi
 
 # Install resource-graph
 echo "Installing resource-graph extension"
@@ -48,7 +62,16 @@ orphan_queries=(
     #  Network Interfaces
     'Network Interfaces:resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
     # Disks
-    'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
+    # Delete unattached disks. For disks created by Kubernetes PVC provisioning (detected via tags), only delete after a retention threshold.
+    # Non-PVC unattached disks are deleted immediately. ASR replica disks are excluded.
+    "Disks:resources
+      | where type has \"microsoft.compute/disks\"
+      | extend diskState = tostring(properties.diskState), createdOn = todatetime(properties.timeCreated)
+      | where managedBy == \"\"
+      | where not(name endswith \"-ASRReplica\" or name startswith \"ms-asr-\")
+      | where diskState in~ (\"Unattached\")
+        )
+      | where iif(isPVC, createdOn < ago(${PVC_RETENTION_DAYS}d), true)"
 )
 
 # Fetch subscriptions to run commands against
