@@ -6,6 +6,8 @@ RUN_OPTION=""
 role_def_name_match="Orphan Resource Cleanup Read/Delete"
 role_principal_id_match="50cce126-c44a-48bb-9361-5f55868d3182"
 
+PVC_RETENTION_DAYS=${PVC_RETENTION_DAYS:-3}
+
 # Mode option to run in dry run (default for pr build, give -m dry-run locally
 while getopts ":m:" opt; do
   case $opt in
@@ -48,7 +50,7 @@ orphan_queries=(
     #  Network Interfaces
     'Network Interfaces:resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
     # Disks
-    'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
+    'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-" | where iif(isPVC, createdOn < ago(${PVC_RETENTION_DAYS}d), true)'
 )
 
 # Fetch subscriptions to run commands against
