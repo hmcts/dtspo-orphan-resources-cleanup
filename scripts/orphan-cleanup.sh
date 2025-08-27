@@ -48,7 +48,7 @@ orphan_queries=(
     #  Network Interfaces
     'Network Interfaces:resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
     # Disks
-    'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
+  'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
 )
 
 # Fetch subscriptions to run commands against
@@ -94,7 +94,12 @@ do
   query_name="${query_item%%:*}"
   query="${query_item##*:}"
   echo "checking for orphaned $query_name..."
-  resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup | jq '.data[].id')
+  # Always run Disks query with Azure CLI --verbose; others run normally
+  if [[ "$query_name" == "Disks" ]]; then
+    resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup --verbose | jq '.data[].id')
+  else
+    resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup | jq '.data[].id')
+  fi
 done
 
 # Solves problem of some resource ID's not having space between them in jq output
