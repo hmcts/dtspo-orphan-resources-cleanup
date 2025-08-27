@@ -96,7 +96,7 @@ do
   echo "checking for orphaned $query_name..."
   # Always run Disks query with Azure CLI --verbose; others run normally
   if [[ "$query_name" == "Disks" ]]; then
-    resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup --verbose | jq '.data[].id')
+    resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup --verbose 2>/dev/null | jq '.data[].id')
   else
     resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup | jq '.data[].id')
   fi
