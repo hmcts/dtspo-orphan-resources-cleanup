@@ -88,14 +88,21 @@ sub_names_to_cleanup=${sub_names_with_match[@]}
 
 echo "Subscriptions to run against: $sub_names_to_cleanup"
 
-# Graph query to fetch orphaned Resource IDs
+"# Graph query to fetch orphaned Resource IDs"
 for query_item in "${orphan_queries[@]}"
 do
   query_name="${query_item%%:*}"
   query="${query_item##*:}"
   echo "checking for orphaned $query_name..."
-  resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup | jq '.data[].id')
+  # Always run Disks query with Azure CLI --verbose; others run normally
+  if [[ "$query_name" == "Disks" ]]; then
+    resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup --verbose 2>/dev/null | jq '.data[].id')
+  else
+    resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup | jq '.data[].id')
+  fi
 done
+
+
 
 # Solves problem of some resource ID's not having space between them in jq output
 resources_to_delete=$(sed 's/""/" "/g' <<< $resources_to_delete)
