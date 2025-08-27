@@ -48,7 +48,7 @@ orphan_queries=(
     #  Network Interfaces
     'Network Interfaces:resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
     # Disks
-  'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
+    'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
 )
 
 # Fetch subscriptions to run commands against
@@ -88,7 +88,7 @@ sub_names_to_cleanup=${sub_names_with_match[@]}
 
 echo "Subscriptions to run against: $sub_names_to_cleanup"
 
-# Graph query to fetch orphaned Resource IDs
+"# Graph query to fetch orphaned Resource IDs"
 for query_item in "${orphan_queries[@]}"
 do
   query_name="${query_item%%:*}"
@@ -101,6 +101,8 @@ do
     resources_to_delete+=$(az graph query -q "$query" --subscriptions $subs_to_cleanup | jq '.data[].id')
   fi
 done
+
+
 
 # Solves problem of some resource ID's not having space between them in jq output
 resources_to_delete=$(sed 's/""/" "/g' <<< $resources_to_delete)
