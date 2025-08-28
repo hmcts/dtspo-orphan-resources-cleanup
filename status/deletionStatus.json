@@ -1,5 +1,1 @@
-[
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/9c604868-4643-43b8-9eb1-4c348c739a3e/resourceGroups/NEXT-RG/providers/Microsoft.Compute/disks/nextcgimvmw-osdisk-20210426-121600 --verbose\\n"
-  }
-]
+[]
