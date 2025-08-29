@@ -1,1 +1,5 @@
-[]
+[
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cactus-dev-rg/providers/Microsoft.Web/serverFarms/cactus-dev-asp02 --verbose\\n"
+  }
+]
