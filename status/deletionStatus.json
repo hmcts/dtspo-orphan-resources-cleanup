@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Compute/availabilitySets/CCD-DATA-0-AV-SET --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Network/networkInterfaces/ccd-data-0-nic --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Network/networkInterfaces/ccd-data-1-nic --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Network/networkInterfaces/ccd-data-2-nic --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Network/networkInterfaces/ccd-data-3-nic --verbose\\n"
+  }
+]
