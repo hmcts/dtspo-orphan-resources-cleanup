@@ -13,5 +13,8 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Network/networkInterfaces/ccd-data-3-nic --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CFT-PREVIEW-01-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-d143665f-bd2b-49c1-9699-10ffc2de3c05 --verbose\\n"
   }
 ]
