@@ -28,17 +28,5 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ccd-elastic-search-sandbox/providers/Microsoft.Network/networkInterfaces/ccd-data-3-nic --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/rg-fd-mvp-demo/providers/Microsoft.Network/networkInterfaces/nic_fw-palo-management-0 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/rg-fd-mvp-demo/providers/Microsoft.Network/networkInterfaces/nic_fw-palo-private-0 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/rg-fd-mvp-demo/providers/Microsoft.Network/networkInterfaces/nic_fw-palo-public-0 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/rg-fd-mvp-demo/providers/Microsoft.Network/networkInterfaces/nic_linuxwebserver-0 --verbose\\n"
   }
 ]
