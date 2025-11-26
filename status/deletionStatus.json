@@ -1,26 +1,5 @@
 [
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/core-infra-idam-sandbox/providers/Microsoft.Network/loadBalancers/forgerock-am-idam-sandbox-lb --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/core-infra-idam-sandbox/providers/Microsoft.Network/loadBalancers/forgerock-am-idam-sandbox-lb-outbound --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/core-infra-idam-sandbox/providers/Microsoft.Network/loadBalancers/forgerock-ds-tokenstore-idam-sandbox-lb --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/core-infra-idam-sandbox/providers/Microsoft.Network/loadBalancers/forgerock-ds-tokenstore-idam-sandbox-lb-outbound --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/core-infra-idam-sandbox/providers/Microsoft.Network/loadBalancers/forgerock-ds-userstore-idam-sandbox-lb --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/core-infra-idam-sandbox/providers/Microsoft.Network/loadBalancers/forgerock-ds-userstore-idam-sandbox-lb-outbound --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/core-infra-idam-sandbox/providers/Microsoft.Network/loadBalancers/forgerock-idm-idam-sandbox-lb-outbound --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-demo/providers/Microsoft.Network/routeTables/aks-demo-core-infra-route-table --verbose\\n"
   },
   {
