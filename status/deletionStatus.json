@@ -15,12 +15,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/ss-test-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-virtualkubelet-40990665-nsg --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/cft-ithc-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-appgateway-74740245-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/cft-ithc-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-virtualkubelet-74740245-nsg --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/ss-dev-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-appgateway-42109181-nsg --verbose\\n"
   },
   {
@@ -43,12 +37,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-virtualkubelet-57921262-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-appgateway-32411976-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-virtualkubelet-32411976-nsg --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ba71a911-e0d6-4776-a1a6-079af1df7139/resourceGroups/ss-ithc-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-appgateway-40003699-nsg --verbose\\n"
