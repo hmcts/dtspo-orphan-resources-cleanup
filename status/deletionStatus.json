@@ -6,9 +6,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d24c931e-2e6d-4508-8583-85ac42715580/resourceGroups/InternalSpoke-rg/providers/Microsoft.Network/routeTables/DEV-INTERNAL-RT --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/62864d44-5da9-4ae9-89e7-0cf33942fa09/resourceGroups/cft-ithc-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-74740245-nsg --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/ss-dev-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-42109181-nsg --verbose\\n"
   },
   {
@@ -19,12 +16,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ba71a911-e0d6-4776-a1a6-079af1df7139/resourceGroups/ss-ithc-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-40003699-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/c68a4bed-4c3d-4956-af51-4ae164c1957c/resourceGroups/ss-demo-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-33656585-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/c68a4bed-4c3d-4956-af51-4ae164c1957c/resourceGroups/ss-demo-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-33656585-nsg --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/soc-tenable-sbox-rg/providers/Microsoft.Network/networkInterfaces/tenable-cloud-scanner-audit-poc534_z1 --verbose\\n"
