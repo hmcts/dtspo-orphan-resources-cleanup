@@ -13,5 +13,8 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-dmz-nonprodi/providers/Microsoft.Network/networkInterfaces/hmcts-dmz-nonprodi-nonprodi-ansible-nic --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/CORE-INFRA-IDAM-PREVIEW/providers/Microsoft.Compute/disks/idam-preview-jumpbox_OsDisk_1_ea401f6292f54e6d813140f9e1b772d7 --verbose\\n"
   }
 ]
