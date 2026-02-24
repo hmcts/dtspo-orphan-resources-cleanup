@@ -1,5 +1,8 @@
 [
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cactus-dev-rg/providers/Microsoft.Web/serverFarms/cactus-dev-asp02 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ai-in-sdlc/providers/Microsoft.Web/serverFarms/ASP-aiinsdlc-a19f --verbose\\n"
   },
   {
