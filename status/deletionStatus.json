@@ -1,8 +1,5 @@
 [
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cactus-dev-rg/providers/Microsoft.Web/serverFarms/cactus-dev-asp02 --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ai-in-sdlc/providers/Microsoft.Web/serverFarms/ASP-aiinsdlc-a19f --verbose\\n"
   },
   {
@@ -19,5 +16,8 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/CORE-INFRA-IDAM-PREVIEW/providers/Microsoft.Compute/disks/idam-preview-jumpbox_OsDisk_1_ea401f6292f54e6d813140f9e1b772d7 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/3130380163ef4de8bfe22a1a80718644-containerRootVolume --verbose\\n"
   }
 ]
