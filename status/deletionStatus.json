@@ -28,11 +28,5 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/CORE-INFRA-IDAM-PREVIEW/providers/Microsoft.Compute/disks/idam-preview-jumpbox_OsDisk_1_ea401f6292f54e6d813140f9e1b772d7 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/557537eacaa640b2a49c33ccefbc93ce-containerRootVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/56ef2dc8238746dca05edb7ba94d03ca-containerRootVolume --verbose\\n"
   }
 ]
