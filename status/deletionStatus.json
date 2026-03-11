@@ -1,6 +1,24 @@
 [
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/plum-shared-infrastructure-aat/providers/Microsoft.Web/serverFarms/plum-aat --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/plum-shared-infrastructure-demo/providers/Microsoft.Web/serverFarms/plum-demo --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/plum-shared-infrastructure-ithc/providers/Microsoft.Web/serverFarms/plum-ithc --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/plum-shared-infrastructure-perftest/providers/Microsoft.Web/serverFarms/plum-perftest --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/courtstranscribe-dev-rg/providers/Microsoft.Web/serverFarms/hmcts-transcribe-backend-plan-dev --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/ai-in-sdlc/providers/Microsoft.Web/serverFarms/ASP-aiinsdlc-a19f --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/crumble-shared-infrastructure-sandbox/providers/Microsoft.Web/serverFarms/crumble-sandbox --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-demo/providers/Microsoft.Network/routeTables/aks-demo-core-infra-route-table --verbose\\n"
