@@ -30,6 +30,12 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/soc-tenable-sbox-rg/providers/Microsoft.Network/networkInterfaces/tenable-cloud-scanner-audit-poc534_z1 --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/opal-test/providers/Microsoft.Network/networkInterfaces/opal-perf-test-vm-0-nic --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/opal-test/providers/Microsoft.Network/networkInterfaces/opal-perf-test-vm-1-nic --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/ccd-elastic-search-upgrade-ithc/providers/Microsoft.Network/networkInterfaces/ccd-data-upgrade-0-nic --verbose\\n"
   },
   {
