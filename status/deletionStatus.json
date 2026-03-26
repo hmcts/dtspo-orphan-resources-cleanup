@@ -40,23 +40,5 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/CORE-INFRA-IDAM-PREVIEW/providers/Microsoft.Compute/disks/idam-preview-jumpbox_OsDisk_1_ea401f6292f54e6d813140f9e1b772d7 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST01-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/7f113df28c1846aca41a1329ffd480e8-containerRootVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST01-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/7f113df28c1846aca41a1329ffd480e8-osDisk --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST01-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/82ebaaa1287c4891a9e697d4937d6c49-containerRootVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST01-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/82ebaaa1287c4891a9e697d4937d6c49-osDisk --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST01-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/8e06d3f2b4b943ddbe40d70732f497a5-containerRootVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST01-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/8e06d3f2b4b943ddbe40d70732f497a5-osDisk --verbose\\n"
   }
 ]
