@@ -36,9 +36,33 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/opal-test/providers/Microsoft.Network/networkInterfaces/opal-perf-test-vm-1-nic --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Network/networkInterfaces/3c7f0e36d9194a0993b064ee551f2bac-publicNIC --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-dmz-nonprodi/providers/Microsoft.Network/networkInterfaces/hmcts-dmz-nonprodi-nonprodi-ansible-nic --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/CORE-INFRA-IDAM-PREVIEW/providers/Microsoft.Compute/disks/idam-preview-jumpbox_OsDisk_1_ea401f6292f54e6d813140f9e1b772d7 --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/151c2ca21e5b49c791343495ef11cf75-containerRootVolume --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/1dc245b5071749bfb071eb2477261659-containerRootVolume --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/2b25d24369ba4de3946c2f1ffa83cb6b-containerRootVolume --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/3c7f0e36d9194a0993b064ee551f2bac-containerRootVolume --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/3d1b3547c3ff467987a40a08b188b5d5-containerRootVolume --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/6e12f73c24f741399e3b9bd507f6f9e2-containerRootVolume --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest01-product-databricks001-managed-rg/providers/Microsoft.Compute/disks/d2d7f0e001d0445498b9e2c40be06025-containerRootVolume --verbose\\n"
   }
 ]
