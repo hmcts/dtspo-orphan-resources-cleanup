@@ -30,6 +30,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/dtsse-dashboard-flexdb-data-aat/providers/Microsoft.Network/networkSecurityGroups/temp-backup-vm-nsg --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ek-transcribe-test-rg/providers/Microsoft.Network/networkSecurityGroups/ek-transcribe-test-nsg --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/datalake-rg/providers/Microsoft.Network/networkSecurityGroups/cts-nsg --verbose\\n"
   },
   {
