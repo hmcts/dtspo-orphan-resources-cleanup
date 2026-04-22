@@ -24,16 +24,10 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/core-infra-demo/providers/Microsoft.Network/routeTables/aks-demo-core-infra-route-table --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ek-transcribe-test-rg/providers/Microsoft.Network/routeTables/ek-transcribe-test-rt --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/d24c931e-2e6d-4508-8583-85ac42715580/resourceGroups/InternalSpoke-rg/providers/Microsoft.Network/routeTables/DEV-INTERNAL-RT --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/1c4f0704-a29e-403d-b719-b90c34ef14c9/resourceGroups/dtsse-dashboard-flexdb-data-aat/providers/Microsoft.Network/networkSecurityGroups/temp-backup-vm-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ek-transcribe-test-rg/providers/Microsoft.Network/networkSecurityGroups/ek-transcribe-test-nsg --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/bf308a5c-0624-4334-8ff8-8dca9fd43783/resourceGroups/datalake-rg/providers/Microsoft.Network/networkSecurityGroups/cts-nsg --verbose\\n"
@@ -46,9 +40,6 @@
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/opal-test/providers/Microsoft.Network/networkInterfaces/opal-perf-test-vm-1-nic --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/ingest05-product-databricks001-managed-rg/providers/Microsoft.Network/networkInterfaces/fcdb0893b875479c91c68dba2bfde2a9-privateNIC --verbose\\n"
   },
   {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-dmz-nonprodi/providers/Microsoft.Network/networkInterfaces/hmcts-dmz-nonprodi-nonprodi-ansible-nic --verbose\\n"
