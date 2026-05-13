@@ -36,24 +36,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/soc-tenable-sbox-rg/providers/Microsoft.Network/networkInterfaces/tenable-cloud-scanner-audit-poc534_z1 --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/opal-test/providers/Microsoft.Network/networkInterfaces/opal-perf-test-vm-0-nic --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/opal-test/providers/Microsoft.Network/networkInterfaces/opal-perf-test-vm-1-nic --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-dmz-nonprodi/providers/Microsoft.Network/networkInterfaces/hmcts-dmz-nonprodi-nonprodi-ansible-nic --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST05-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/224b33ed855b44fbb1435e3b5f422117-0-scratchVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST05-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/224b33ed855b44fbb1435e3b5f422117-containerRootVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST05-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/eff759d5614546d18358c06ed0cfab60-0-scratchVolume --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/df72bb30-d6fb-47bd-82ee-5eb87473ddb3/resourceGroups/INGEST05-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/eff759d5614546d18358c06ed0cfab60-containerRootVolume --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/CFT-PREVIEW-00-AKS-NODE-RG/providers/Microsoft.Compute/disks/pvc-017d5236-630d-4d17-b899-ab76ca288539 --verbose\\n"
   }
 ]
