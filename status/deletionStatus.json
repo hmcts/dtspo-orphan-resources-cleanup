@@ -57,6 +57,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/2307d175-7e49-434b-9ac2-515529b845f2/resourceGroups/soc-tenable-sbox-rg/providers/Microsoft.Network/networkInterfaces/tenable-cloud-scanner-audit-poc534_z1 --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/rsv-poc-rg/providers/Microsoft.Network/networkInterfaces/rsv-poc-vm-restore-1225020626-nic-eca72087b1ed407bab38a722e1ed8814 --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-dmz-nonprodi/providers/Microsoft.Network/networkInterfaces/hmcts-dmz-nonprodi-nonprodi-ansible-nic --verbose\\n"
   }
 ]
