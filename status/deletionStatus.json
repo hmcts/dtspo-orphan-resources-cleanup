@@ -69,12 +69,6 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/ss-sbox-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-32411976-nsg --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/cft-sbox-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-23651290-nsg --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/cft-sbox-01-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-23651290-nsg --verbose\\n"
-  },
-  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ba71a911-e0d6-4776-a1a6-079af1df7139/resourceGroups/ss-ithc-00-aks-node-rg/providers/Microsoft.Network/networkSecurityGroups/aks-agentpool-40003699-nsg --verbose\\n"
   },
   {
@@ -102,30 +96,42 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/b72ab7b7-723f-4b18-b6f6-03b0f2c6a1bb/resourceGroups/rsv-poc-rg/providers/Microsoft.Network/networkInterfaces/rsv-poc-vm-restore-1511040626-nic-94e60218316045cbb4a5ca80df12d627 --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Network/networkInterfaces/18b9b9d847884f67b068e06ea978d537-privateNIC --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Network/networkInterfaces/18b9b9d847884f67b068e06ea978d537-publicNIC --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Network/networkInterfaces/524056b4815d4850bf816b26e756c4e5-privateNIC --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Network/networkInterfaces/524056b4815d4850bf816b26e756c4e5-publicNIC --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Network/networkInterfaces/e519f98f5ff048519df194a0ee8dd15d-privateNIC --verbose\\n"
+  },
+  {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/ingest00-product-databricks001-managed-rg/providers/Microsoft.Network/networkInterfaces/e519f98f5ff048519df194a0ee8dd15d-publicNIC --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-dmz-nonprodi/providers/Microsoft.Network/networkInterfaces/hmcts-dmz-nonprodi-nonprodi-ansible-nic --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/ss-dev-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-4fec8690-5ef9-43d7-8fce-073a210e1a00 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/18b9b9d847884f67b068e06ea978d537-containerRootVolume --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/867a878b-cb68-4de5-9741-361ac9e178b6/resourceGroups/ss-dev-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-ca948129-59d8-40db-9376-4821abb70801 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/18b9b9d847884f67b068e06ea978d537-osDisk --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-2695ae0e-5373-425c-a1c4-c20753de4685 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/524056b4815d4850bf816b26e756c4e5-containerRootVolume --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-27514bbd-8875-4a5c-a31f-02b102b777a9 --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/524056b4815d4850bf816b26e756c4e5-osDisk --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-4575fe81-688a-4b24-8e93-67eabec3818a --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/e519f98f5ff048519df194a0ee8dd15d-containerRootVolume --verbose\\n"
   },
   {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-9cee1720-3d43-4be0-aa54-52f2ab33fbb7 --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-b59428b0-ff5f-4df0-b17b-d9ec6cc6b01b --verbose\\n"
-  },
-  {
-    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/8b6ea922-0862-443e-af15-6056e1c9b9a4/resourceGroups/cft-preview-00-aks-node-rg/providers/Microsoft.Compute/disks/pvc-bcdaf7b8-a6f1-4fa8-b505-26615a62749c --verbose\\n"
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/da8a21e5-d260-4162-9391-6bdadf9103f8/resourceGroups/INGEST00-PRODUCT-DATABRICKS001-MANAGED-RG/providers/Microsoft.Compute/disks/e519f98f5ff048519df194a0ee8dd15d-osDisk --verbose\\n"
   }
 ]
