@@ -15,6 +15,9 @@
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/7a4e3bd5-ae3a-4d0c-b441-2188fee3ff1c/resourceGroups/plum-shared-infrastructure-perftest/providers/Microsoft.Web/serverFarms/plum-perftest --verbose\\n"
   },
   {
+    "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/a8140a9e-f1b0-481f-a4de-09e2ee23f7ab/resourceGroups/toffee-shared-infrastructure-sbox/providers/Microsoft.Web/serverFarms/toffee-sbox --verbose\\n"
+  },
+  {
     "message": "A resource failed to delete!\\nTo see why, you can run: az resource delete --ids /subscriptions/ba71a911-e0d6-4776-a1a6-079af1df7139/resourceGroups/toffee-shared-infrastructure-ithc/providers/Microsoft.Web/serverFarms/toffee-ithc --verbose\\n"
   },
   {
