@@ -47,8 +47,8 @@ orphan_queries=(
     'Public IPs:resources | where type == "microsoft.network/publicipaddresses" | where isnull(properties.ipAddress) or properties.ipAddress == ""'
     #  Network Interfaces
     'Network Interfaces:resources | where type has "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
-    # Disks
-    'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-")'
+    # Disks (exclude AKS PVC volumes: unattached pvc-* disks in node RGs are still referenced by Kubernetes PVCs)
+    'Disks:resources | where type has "microsoft.compute/disks" | extend diskState = tostring(properties.diskState) | where managedBy == "" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-") | where not(name startswith "pvc-" and resourceGroup =~ "-aks-node-rg$")'
 )
 
 # Fetch subscriptions to run commands against
