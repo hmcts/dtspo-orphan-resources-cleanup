@@ -30,7 +30,7 @@ jobs:
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
           allow-no-subscriptions: true
       - name: Dry Run orphaned resources in Azure
-        run: bash ./scripts/orphan-cleanup.sh -m dry-run ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
+        run: ./scripts/orphan-cleanup.sh -m dry-run ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
       - name: Output deletion objects
         run: |
             cat ./status/deletionStatus.json
@@ -54,7 +54,7 @@ jobs:
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
           allow-no-subscriptions: true
       - name: Delete orphaned resources in Azure
-        run: bash ./scripts/orphan-cleanup.sh
+        run: ./scripts/orphan-cleanup.sh
       - name: Commit deletion status json file
         continue-on-error: true
         run: |
