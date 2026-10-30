@@ -2,69 +2,38 @@ name: orphaned-resource-cleanup
 
 on:
   workflow_dispatch:
-    inputs:
-      dryRunEnabled:
-        description: 'Enable Dry-Run Mode'
-        required: true
-        default: false
-        type: boolean
-  schedule:
-    - cron: '0 9 * * *' # Every day at 8pm BST
 
-env:
-  GH_TOKEN: ${{ secrets.PLATFORM_USER_TOKEN }}
+permissions:
+  contents: read
 
 jobs:
-  dry-run:
+  preview:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       id-token: write
-    if: ${{ inputs.dryRunEnabled == true }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: 'Az CLI login'
+        with:
+          persist-credentials: false
+      - name: Az CLI login
         uses: azure/login@v2
         with:
           client-id: c670b53f-74bc-4fa8-82c6-5577e8600d2a # DTSPO Orphaned Resource Cleanup
           tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
           allow-no-subscriptions: true
-      - name: Dry Run orphaned resources in Azure
-        run: ./scripts/orphan-cleanup.sh -m dry-run ${{ steps.slack-webhook.outputs.orphaned-resources-slack-webhook }} dtspo-orphaned-resource-cleanup
-      - name: Output deletion objects
+      - name: Install Resource Graph CLI extension
+        run: az extension add --name resource-graph --only-show-errors
+      - name: Preview orphan-resource candidates (no deletion)
         run: |
-            cat ./status/deletionStatus.json
-
-  live:
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: write
-    if: ${{ inputs.dryRunEnabled == false }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+          mkdir -p preview
+          bash scripts/orphan-cleanup.sh -m dry-run > preview/orphan-resources.json
+          jq '{mode, checkedAt, summary, warning}' preview/orphan-resources.json
+      - name: Upload preview for review
+        uses: actions/upload-artifact@v4
         with:
-          fetch-depth: '0'
-          token: ${{ env.GH_TOKEN }}
-      - name: 'Az CLI login'
-        uses: azure/login@v2
-        with:
-          client-id: c670b53f-74bc-4fa8-82c6-5577e8600d2a # DTSPO Orphaned Resource Cleanup
-          tenant-id: 531ff96d-0ae9-462a-8d2d-bec7c0b42082 # HMCTS.NET
-          allow-no-subscriptions: true
-      - name: Delete orphaned resources in Azure
-        run: ./scripts/orphan-cleanup.sh
-      - name: Commit deletion status json file
-        continue-on-error: true
-        run: |
-          # Check for changes
-          if ! git diff --quiet; then
-              git config user.name hmcts-platform-operations
-              git config user.email github-platform-operations@hmcts.net
-              git add ./status
-              git commit -m "Automated - save failed deletions to json file"
-              git push --force
-          else
-              echo "No changes to commit. Skipping commit and push."
-          fi
+          name: orphan-resource-preview
+          path: preview/orphan-resources.json
+          if-no-files-found: error
+          retention-days: 7
