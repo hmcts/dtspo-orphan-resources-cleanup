@@ -59,24 +59,25 @@ subscriptions=()
 while IFS= read -r subscription; do
   echo "Checking cleanup role assignment in subscription $subscription..." >&2
   az role assignment list --subscription "$subscription" --all --output json --only-show-errors > "$workDir/roles.json"
-  if ! jq -e 'type == "array" and all(.[];
-    (.roleDefinitionName | type) == "string" and
-    (.principalId | type) == "string" and (.scope | type) == "string")' \
-    "$workDir/roles.json" >/dev/null; then
+  if ! jq -e 'type == "array"' "$workDir/roles.json" >/dev/null; then
     echo "Azure returned an invalid role-assignment list for $subscription; preview stopped." >&2
     exit 1
   fi
+  # Inherited assignments can have a null roleDefinitionName (unresolvable role); they never match.
+  # The role must cover the whole subscription: assigned at the subscription or an ancestor management group.
   if jq -e --arg role "$role_def_name_match" --arg principal "$role_principal_id_match" \
     --arg scope "/subscriptions/$subscription" '
       any(.[]; .roleDefinitionName == $role and .principalId == $principal and
-        ((.scope | ascii_downcase) == ($scope | ascii_downcase)))
+        (.scope | type) == "string" and
+        ((.scope | ascii_downcase) == ($scope | ascii_downcase) or
+         (.scope | ascii_downcase | startswith("/providers/microsoft.management/managementgroups/"))))
     ' "$workDir/roles.json" >/dev/null; then
     subscriptions+=("$subscription")
   fi
 done < <(jq -r '.[].id' "$workDir/accounts.json")
 
 if [[ ${#subscriptions[@]} -eq 0 ]]; then
-  echo "No subscriptions have the required subscription-level cleanup role assignment. Refusing an unscoped query." >&2
+  echo "No subscriptions have the cleanup role at subscription or management-group level. Refusing an unscoped query." >&2
   exit 1
 fi
 printf '%s\n' "${subscriptions[@]}" | jq -R . | jq -s . > "$workDir/subscriptions.json"
