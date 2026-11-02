@@ -52,6 +52,14 @@ elif args[:3] == ["role", "assignment", "list"]:
         roles[0]["principalId"] = "someone-else"
     if scenario == "bad-role":
         roles[0]["scope"] = None
+    if scenario == "mg-role":
+        roles[0]["scope"] = "/providers/Microsoft.Management/managementGroups/SDS-Sandbox"
+    if scenario == "unresolved-inherited-role":
+        roles.insert(0, {"roleDefinitionName": None, "principalId": "group-id",
+                         "scope": "/providers/Microsoft.Management/managementGroups/HMCTS"})
+        roles[1]["scope"] = "/providers/Microsoft.Management/managementGroups/SDS-Sandbox"
+    if scenario == "roles-not-array":
+        roles = {"error": "unexpected"}
     print(json.dumps(roles))
 elif args[:2] == ["graph", "query"]:
     query = args[args.index("-q")+1]
@@ -136,6 +144,15 @@ else:
         result, _ = self.run_preview(arguments=("-m", "dry-run"))
         self.assertEqual(result.returncode, 0, result.stderr)
 
+    def test_management_group_role_covers_subscription(self):
+        # Production assigns the cleanup role at management-group level, and inherited
+        # assignments may have an unresolvable (null) role name.
+        for scenario in ("mg-role", "unresolved-inherited-role"):
+            with self.subTest(scenario=scenario):
+                result, _ = self.run_preview(scenario)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertEqual(json.loads(result.stdout)["subscriptions"], [SUBSCRIPTION])
+
     def test_unsafe_or_invalid_modes_fail_before_azure(self):
         for args in (("-m", "live"), ("-m", "almost-dry-run"), ("-m",), ("unexpected",), ("-x",)):
             with self.subTest(arguments=args):
@@ -145,7 +162,7 @@ else:
                 self.assertEqual(result.stdout, "")
 
     def test_no_matching_subscription_never_runs_unscoped_queries(self):
-        for scenario in ("no-role", "rg-role", "wrong-principal"):
+        for scenario in ("no-role", "rg-role", "wrong-principal", "bad-role"):
             with self.subTest(scenario=scenario):
                 result, calls = self.run_preview(scenario)
                 self.assertNotEqual(result.returncode, 0)
@@ -155,7 +172,7 @@ else:
 
     def test_discovery_and_query_failures_never_emit_success_report(self):
         for scenario in (
-            "account-error", "role-error", "bad-role", "query-error", "bad-json",
+            "account-error", "role-error", "roles-not-array", "query-error", "bad-json",
             "bad-shape", "out-of-scope", "wrong-id", "repeated-token", "missing-token",
         ):
             with self.subTest(scenario=scenario):

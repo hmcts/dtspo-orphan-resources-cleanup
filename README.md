@@ -30,10 +30,13 @@ which remains the historical failure list used by daily monitoring.
 
 ## Scope and interpretation
 
-Only subscriptions with the subscription-level `Orphan Resource Cleanup
-Read/Delete` role assigned to the existing cleanup principal are queried. No
-matching subscriptions, role-discovery failures, and query failures stop the
-preview with a non-zero exit; they never produce an empty success report.
+Only subscriptions where the existing cleanup principal has the `Orphan
+Resource Cleanup Read/Delete` role at subscription or management-group level
+(the role is currently assigned at management-group level) are queried.
+Resource-group-level assignments do not count. Inherited assignments whose role
+name cannot be resolved are ignored. No matching subscriptions, role-discovery
+failures, and query failures stop the preview with a non-zero exit; they never
+produce an empty success report.
 Resource Graph pagination is followed so the preview is not limited to the
 first page.
 
