@@ -137,12 +137,24 @@ else:
         self.assertEqual(report["ignored"][0]["name"], "ignored")
         self.assertRegex(report["checkedAt"], r"^\d{4}-\d{2}-\d{2}T.*Z$")
         graph_calls = [call for call in calls if call[:2] == ["graph", "query"]]
-        self.assertEqual(len(graph_calls), 10)
+        self.assertEqual(len(graph_calls), 9)
         self.assertTrue(all("project id" in call[call.index("-q") + 1] for call in graph_calls))
 
     def test_explicit_dry_run(self):
         result, _ = self.run_preview(arguments=("-m", "dry-run"))
         self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_resource_groups_are_not_queried_or_reported(self):
+        result, calls = self.run_preview()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        queries = [call[call.index("-q") + 1] for call in calls if call[:2] == ["graph", "query"]]
+        self.assertEqual(len(queries), 9)  # Eight resource types, plus the second page.
+        self.assertTrue(all("resourcecontainers" not in query.lower() for query in queries))
+        self.assertTrue(all("microsoft.resources/subscriptions/resourcegroups" not in query.lower()
+                            for query in queries))
+        report = json.loads(result.stdout)
+        self.assertTrue(all(row["category"] != "Resource Groups"
+                            for row in report["candidates"] + report["ignored"]))
 
     def test_management_group_role_covers_subscription(self):
         # Production assigns the cleanup role at management-group level, and inherited

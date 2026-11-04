@@ -40,6 +40,10 @@ produce an empty success report.
 Resource Graph pagination is followed so the preview is not limited to the
 first page.
 
+Resource groups themselves are excluded from discovery and reporting, including
+empty groups. Resources inside those groups are still checked by the remaining
+eight resource-type queries.
+
 The report separates `candidates` from resources tagged
 `ignoredByOrphanCleanup: true` (case-insensitive key/value). It includes a UTC
 timestamp, subscription scope, categories, and counts. AKS `pvc-*` disks in
@@ -52,8 +56,8 @@ orphan. For example, an empty App Service plan may be intentionally reserved,
 an unattached network resource may still be required, and an unallocated public
 IP is not necessarily unused. Resource Graph data may lag behind current state.
 Review ownership, dependencies, tags, locks, retention needs, and current Azure
-state before approving any future deletion implementation. Empty resource
-groups and disks require particular care.
+state before approving any future deletion implementation. Disks require
+particular care.
 
 Restoring live execution or scheduling requires a separate reviewed change.
 Do not feed this preview directly into a deletion command.

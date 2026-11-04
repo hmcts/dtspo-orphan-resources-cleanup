@@ -41,7 +41,6 @@ orphan_queries=(
   'Route Tables:resources | where type =~ "microsoft.network/routetables" | where isnull(properties.subnets)'
   'Availability Sets:resources | where type =~ "microsoft.compute/availabilitysets" | where properties.virtualMachines == "[]"'
   'Network Security Groups:resources | where type =~ "microsoft.network/networksecuritygroups" | where isnull(properties.networkInterfaces) and isnull(properties.subnets)'
-  'Resource Groups:ResourceContainers | where type =~ "microsoft.resources/subscriptions/resourcegroups" | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | join kind=leftouter (Resources | extend rgAndSub = strcat(resourceGroup, "--", subscriptionId) | summarize count() by rgAndSub) on rgAndSub | where isnull(count_)'
   'Public IPs:resources | where type =~ "microsoft.network/publicipaddresses" | where isnull(properties.ipAddress) or properties.ipAddress == ""'
   'Network Interfaces:resources | where type =~ "microsoft.network/networkinterfaces" | where isnull(properties.privateEndpoint) | where isnull(properties.privateLinkService) | where properties !has "virtualmachine"'
   'Disks:resources | where type =~ "microsoft.compute/disks" | where managedBy == "" | where properties.diskState =~ "Unattached" | where not(name endswith "-ASRReplica" or name startswith "ms-asr-") | where not(name startswith "pvc-" and resourceGroup endswith "-aks-node-rg")'
